@@ -118,5 +118,24 @@
     <Page Include="Views\Register.xaml" />
     <Page Include="Views\SecondaryWindow.xaml" />
   </ItemGroup>
+    <Resource Include="fonts\Ruda\Ruda-VariableFont_wght.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-Black.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-Bold.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-ExtraBold.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-Medium.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-Regular.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-SemiBold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fonts\Ruda\OFL.txt" />
+    <Resource Include="fonts\Ruda\README.txt" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
