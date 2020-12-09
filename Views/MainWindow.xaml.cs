@@ -1,4 +1,8 @@
-﻿namespace BidCardCoin
+﻿using System.Windows;
+using BidCardCoin.Vue;
+
+
+namespace BidCardCoin
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -9,5 +13,9 @@
         {
             InitializeComponent();
         }
+        
+        
+
+        
     }
 }
