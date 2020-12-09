@@ -7,7 +7,9 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <StackPanel Name="stkTest" />
-        <Label Content="Produit"></Label>
+        <StackPanel Name="stkTest" >
+            <Label Content="Produit" StackPanel.ZIndex="0"></Label>
+            <Button Click="btnAjouter" Height="40" Width="40">Ajouter</Button>
+        </StackPanel>
     </Grid>
 </UserControl>

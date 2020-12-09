@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
+using BidCardCoin.Vue;
 
 namespace BidCardCoin.Views
 {
@@ -8,5 +10,12 @@ namespace BidCardCoin.Views
         {
             InitializeComponent();
         }
+        private void btnAjouter(object sender, RoutedEventArgs e)
+        {
+            Ajout_produit ucObj = new Ajout_produit();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
+        
     }
 }

@@ -13,15 +13,13 @@ namespace BidCardCoin
         {
             InitializeComponent();
         }
+        
 
-        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        private void BtnNext(object sender, RoutedEventArgs routedEventArgs)
         {
-
-        }
-
-        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-
+            SecondaryWindow secondaryWindow = new SecondaryWindow();
+            this.Close();
+            secondaryWindow.Show();
         }
 
     }

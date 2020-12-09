@@ -12,25 +12,13 @@ namespace BidCardCoin.Vue
         }
         private void btnLogout(object sender, RoutedEventArgs e)
         {
-            Login ucObj = new Login();
-            stkTest.Children.Clear();
-            stkTest.Children.Add(ucObj);
+            MainWindow mainWindow = new MainWindow();
+            App.Current.Windows[0].Close();
+            mainWindow.Show();
         }
         private void btnAjout_enchere(object sender, RoutedEventArgs e)
         {
             Ajout_enchere ucObj = new Ajout_enchere();
-            stkTest.Children.Clear();
-            stkTest.Children.Add(ucObj);
-        }
-        private void btnLot(object sender, RoutedEventArgs e)
-        {
-            Lot ucObj = new Lot();
-            stkTest.Children.Clear();
-            stkTest.Children.Add(ucObj);
-        }
-        private void btnProduit(object sender, RoutedEventArgs e)
-        {
-            Produit ucObj = new Produit();
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
         }

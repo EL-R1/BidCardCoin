@@ -6,8 +6,18 @@
         xmlns:local="clr-namespace:BidCardCoin.Vue"
         mc:Ignorable="d"
         Title="SecondaryWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel Name="stkTest"></StackPanel>
-        <Label Content="Secondary Window"></Label>
+    <Grid >
+         
+        <StackPanel Name="NavBar" Orientation="Horizontal" VerticalAlignment="Top" 
+                    HorizontalAlignment="Center" StackPanel.ZIndex="1">
+            <Button Click="btnEnchere" Height="40" Width="75">Voir Enchere</Button>
+            <Button Click="btnLot" Height="40" Width="75">Voir Lot</Button>
+            <Button Click="btnProduit" Height="40" Width="75">Voir produit</Button>
+        </StackPanel>
+        <StackPanel Name="stkTest" >
+            <Label Content="Secondary Window" StackPanel.ZIndex="0" ></Label>  
+        </StackPanel>
+        
+        
     </Grid>
 </Window>
