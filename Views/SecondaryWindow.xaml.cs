@@ -34,6 +34,18 @@ namespace BidCardCoin.Vue
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
         }
+        private void btnCategorie(object sender, RoutedEventArgs e)
+        {
+            Categorie ucObj = new Categorie();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
+        private void btnLieu(object sender, RoutedEventArgs e)
+        {
+            Lieu ucObj = new Lieu();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
         
         private void btnExit(object sender, RoutedEventArgs routedEventArgs)
         {
