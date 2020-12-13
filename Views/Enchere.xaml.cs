@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Controls;
+using BidCardCoin.Crtl;
+using BidCardCoin.ORM;
 using BidCardCoin.Views;
 
 namespace BidCardCoin.Vue
@@ -9,14 +12,21 @@ namespace BidCardCoin.Vue
         public Enchere()
         {
             InitializeComponent();
+            loadEncheres();
         }
-        private void btnLogout(object sender, RoutedEventArgs e)
+        EnchereViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Enchere par exemple.
+        ObservableCollection<EnchereViewModel> lp;
+        int compteur = 0;
+        
+        void loadEncheres()
         {
-            MainWindow mainWindow = new MainWindow();
-            App.Current.Windows[0].Close();
-            mainWindow.Show();
+            lp = EnchereORM.listeEncheres();
+            myDataObject = new EnchereViewModel();
+            //LIEN AVEC la VIEW
+            listeEncheres.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.
+        
         }
-        private void btnAjout_enchere(object sender, RoutedEventArgs e)
+        private void btnAjouter(object sender, RoutedEventArgs e)
         {
             Ajout_enchere ucObj = new Ajout_enchere();
             stkTest.Children.Clear();

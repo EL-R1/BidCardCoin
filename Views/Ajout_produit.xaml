@@ -8,9 +8,43 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <StackPanel Name="stkTest" >
-            <Label Content="Ajout produit" StackPanel.ZIndex="0"></Label>
+            <Label Content="Ajout produit" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
+            
+            <Label Content="Id de Lot"></Label>
+            <TextBox Name="id_lot" PreviewTextInput="FloatOnly" Text="{Binding id_lot, Mode=TwoWay}"/>
+            
+            <Label Content="Prix de départ"></Label>
+            <TextBox Name="prix_de_depart" PreviewTextInput="FloatOnly" Text="{Binding prix_depart, Mode=TwoWay}"/>
+            
+            <Label Content="Description"></Label>
+            <TextBox Name="Description" Text="{Binding description, Mode=TwoWay}"/>
+            
+            <Label Content="Date de Vente"></Label>
+            <DatePicker Name="Date_Vente" Text="{Binding date_vente,Mode=TwoWay}"></DatePicker>
+            
+            <Label Content="Estimation"></Label>
+            <TextBox Name="estimation" PreviewTextInput="FloatOnly" Text="{Binding estimation, Mode=TwoWay}"/>
+            
+            <Label Content="is_vendu"></Label>
+            <TextBox Name="is_vendu" PreviewTextInput="BoolOnly" Text="{Binding is_vendu,Mode=TwoWay}"/>
+
+            <Label Content="Prix de reserve"></Label>
+            <TextBox Name="prix_reserve" PreviewTextInput="FloatOnly" Text="{Binding prix_reserve, Mode=TwoWay}"/>
+            
+            <Label Content="Region"></Label>
+            <TextBox Name="region" Text="{Binding region,Mode=TwoWay}"/>
+            
+            <Label Content="Attribut"></Label>
+            <TextBox Name="attribut" Text="{Binding attribut, Mode=TwoWay}"/>
+
             <Button Click="btnAjouter" Height="40" Width="50">Ajouter</Button>
+            
+            
+            
             <Button Click="btnReturn" Height="40" Width="40">Retour</Button>
+            
+            
+            
         </StackPanel>
         
     </Grid>

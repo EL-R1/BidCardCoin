@@ -8,8 +8,20 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <StackPanel Name="stkTest" >
-            <Label Content="ajout lot" StackPanel.ZIndex="0"></Label>
+            <Label Content="ajout lot" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
+            
+            <Grid Name ="grigrid" VerticalAlignment="Top">
+                <StackPanel>
+                    <Label Content="Id Vente enchere"></Label>
+                    <TextBox Name="id_vente_enchere" Text="{Binding id_vente_enchere, Mode=TwoWay}"  Height="20" />
+                    
+                    <Label Content="Description"></Label>
+                    <TextBox Name="description" Text="{Binding description, Mode=TwoWay}"  Height="20"  />
+                </StackPanel>
+            </Grid>
+            
             <Button Click="btnAjouter" Height="40" Width="50">Ajouter</Button>
+            
             <Button Click="btnReturn" Height="40" Width="40">Retour</Button>
         </StackPanel>
        

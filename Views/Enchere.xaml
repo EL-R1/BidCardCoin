@@ -7,10 +7,22 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <StackPanel Name="stkTest" >
-            <Label Content="Enchere" StackPanel.ZIndex="0"></Label>
-            <Button Click="btnAjout_enchere" Height="40" Width="40">Ajouter</Button>
-            <Button Click="btnLogout" Height="40" Width="40">Retour</Button>
+        <StackPanel Name="stkTest">
+            <Label Content="Enchere" StackPanel.ZIndex="0" Margin="0 50 0 0" ></Label>
+            
+            
+            <DataGrid Name="listeEncheres" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="200,0"  Grid.ColumnSpan="2" BorderBrush="Black" Background="#FFA4A4A4"
+                      Height="300"
+                      ScrollViewer.CanContentScroll="True" 
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="ID" Binding="{Binding id_vente_enchere, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="Date de la Vente aux enchères" Binding="{Binding date_vente_enchere, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="Id lieu" Binding="{Binding id_lieu, Mode=TwoWay}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Click="btnAjouter" Height="40" Width="40">Ajouter</Button>
         </StackPanel>
     </Grid>
 </UserControl>

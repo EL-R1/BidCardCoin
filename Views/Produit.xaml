@@ -7,9 +7,35 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
+        
+        
         <StackPanel Name="stkTest" >
-            <Label Content="Produit" StackPanel.ZIndex="0"></Label>
+            <Label Content="Produit" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
+            <DataGrid Name="listeProduits" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="200,0"  Grid.ColumnSpan="2" BorderBrush="Black" Background="#FFA4A4A4"
+                      Height="300"
+                      ScrollViewer.CanContentScroll="True" 
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="*" Header="id" Binding="{Binding id_produit, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="id lot" Binding="{Binding id_lot}" />
+                    <DataGridTextColumn Width="*" Header="prix de départ" Binding="{Binding prix_depart, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="description" Binding="{Binding description, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="date vente" Binding="{Binding date_vente, StringFormat={}{0:dd/MM/yyyy}, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="estimation" Binding="{Binding estimation, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="is_vendu" Binding="{Binding is_vendu, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="prix_reserve" Binding="{Binding prix_reserve, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="region" Binding="{Binding region, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="attribut" Binding="{Binding attribut, Mode=TwoWay}" />
+                        
+                </DataGrid.Columns>
+            </DataGrid>
+            
             <Button Click="btnAjouter" Height="40" Width="40">Ajouter</Button>
+            
         </StackPanel>
+        
+            
+        
     </Grid>
 </UserControl>

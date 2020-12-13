@@ -5,17 +5,25 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:BidCardCoin.Vue"
         mc:Ignorable="d"
-        Title="SecondaryWindow" Height="450" Width="800">
+        Title="SecondaryWindow" WindowState="Maximized" WindowStyle="None">
     <Grid >
-         
+        <Button Content="❌" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnExit"></Button>
+        
         <StackPanel Name="NavBar" Orientation="Horizontal" VerticalAlignment="Top" 
                     HorizontalAlignment="Center" StackPanel.ZIndex="1">
             <Button Click="btnEnchere" Height="40" Width="75">Voir Enchere</Button>
             <Button Click="btnLot" Height="40" Width="75">Voir Lot</Button>
             <Button Click="btnProduit" Height="40" Width="75">Voir produit</Button>
         </StackPanel>
+        
+        
+        
+        <StackPanel Name="home_button" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Button Click="btnLogout" Height="40" Width="40">Retour</Button>
+        </StackPanel>
         <StackPanel Name="stkTest" >
-            <Label Content="Secondary Window" StackPanel.ZIndex="0" ></Label>  
+            <Label Content="Secondary Window" StackPanel.ZIndex="0" Margin="0 50 0 0" ></Label>  
+            <TextBlock> Bienvenu sur le site de BidCardCoin en espérant que vous apprécierez notre site </TextBlock>
         </StackPanel>
         
         

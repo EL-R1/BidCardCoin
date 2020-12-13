@@ -9,6 +9,13 @@ namespace BidCardCoin.Vue
         {
             InitializeComponent();
         }
+        private void btnLogout(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            this.Close();
+            //App.Current.Windows[0].Close();
+            mainWindow.Show();
+        }
         private void btnEnchere(object sender, RoutedEventArgs e)
         {
             Enchere ucObj = new Enchere();
@@ -26,6 +33,11 @@ namespace BidCardCoin.Vue
             Produit ucObj = new Produit();
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
+        }
+        
+        private void btnExit(object sender, RoutedEventArgs routedEventArgs)
+        {
+            this.Close();
         }
     }
 }

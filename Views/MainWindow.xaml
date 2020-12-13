@@ -5,11 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BidCardCoin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" WindowState="Maximized" WindowStyle="None">
     <Grid>
+        <Button Content="❌" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnExit" StackPanel.ZIndex="1"></Button>
+        
         <StackPanel>
-            <Label Content="Login" StackPanel.ZIndex="0"></Label>
-            <Button Content="Login" Height="40" Width="40" Click="BtnNext"></Button>
+            <Label Content="Login" StackPanel.ZIndex="0" ></Label>
+            <Button Content="Login" Height="75" Width="75" Click="BtnNext"></Button>
+            
+            
+            <!--<Button Name="button" Content="Hello" Height="75" Width="75" Click="btnExit">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <Viewbox>
+                            <TextBlock>MyButton</TextBlock>
+                        </Viewbox>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+
+            </Button>-->
         </StackPanel>
     </Grid>
 </Window>

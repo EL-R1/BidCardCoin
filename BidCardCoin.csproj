@@ -110,7 +110,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Crtl\EnchereViewModel.cs" />
+    <Compile Include="Crtl\LotViewModel.cs" />
+    <Compile Include="Crtl\ProduitViewModel.cs" />
     <Compile Include="DAL\DALConnection.cs" />
+    <Compile Include="DAL\EnchereDAL.cs" />
+    <Compile Include="DAL\LotDAL.cs" />
+    <Compile Include="DAL\ProduitDAL.cs" />
+    <Compile Include="DAO\EnchereDAO.cs" />
+    <Compile Include="DAO\LotDAO.cs" />
+    <Compile Include="DAO\ProduitDAO.cs" />
+    <Compile Include="ORM\EnchereORM.cs" />
+    <Compile Include="ORM\LotORM.cs" />
+    <Compile Include="ORM\ProduitORM.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Views\Ajout_enchere.xaml.cs">
       <DependentUpon>Ajout_enchere.xaml</DependentUpon>
     </Compile>
@@ -167,10 +180,6 @@
     </Page>
     <Page Include="Views\Produit.xaml" />
     <Page Include="Views\SecondaryWindow.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAO" />
-    <Folder Include="ORM" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

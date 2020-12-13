@@ -17,11 +17,10 @@ namespace BidCardCoin.DAL
             {
                 server = "localhost";
                 database = "bcc";
-                uid = "bcc";
-                password = "bcc";
+                uid = "root";
+                password = "";
                 string connectionString;
-                connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-                                   database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+                connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
                 connection = new MySqlConnection(connectionString);
                 connection.Open();
             }

@@ -21,6 +21,11 @@ namespace BidCardCoin
             this.Close();
             secondaryWindow.Show();
         }
+        
+        private void btnExit(object sender, RoutedEventArgs routedEventArgs)
+        {
+            this.Close();
+        }
 
     }
 }
