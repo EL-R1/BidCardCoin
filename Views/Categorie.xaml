@@ -17,7 +17,7 @@
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       ScrollViewer.HorizontalScrollBarVisibility="Auto">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="Id" Binding="{Binding id_categorie, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="Id" Binding="{Binding id_categorie, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding nom, Mode=TwoWay}" />
                 </DataGrid.Columns>
             </DataGrid>
