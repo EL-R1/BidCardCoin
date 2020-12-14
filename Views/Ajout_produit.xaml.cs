@@ -35,7 +35,7 @@ namespace BidCardCoin.Views
         }
         private void FloatOnly(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex(@"/^(?!0\d)\d*(\.\d+)?$/");
+            Regex regex = new Regex(@"/(?!0\d)\d*(\.\d+)?/");
             e.Handled = regex.IsMatch(e.Text);
         }
         private void BoolOnly(object sender, TextCompositionEventArgs e)

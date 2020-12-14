@@ -10,7 +10,7 @@ namespace BidCardCoin.Crtl
         public LieuViewModel() {}
         
         private int _id_lieu;
-        public int id_lieu
+        public int id
         {
             get { return _id_lieu; }
             set { _id_lieu = value; OnPropertyChanged("id_lieu"); }
@@ -47,7 +47,7 @@ namespace BidCardCoin.Crtl
 
         public LieuViewModel(int id_lieu_,string nom_,string adresse_,string ville_,int code_postal_)
         {
-            this.id_lieu = id_lieu_;
+            this.id = id_lieu_;
             this.nom = nom_;
             this.adresse = adresse_;
             this.ville = ville_;

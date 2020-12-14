@@ -1,7 +1,9 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using BidCardCoin.Annotations;
 using BidCardCoin.ORM;
+
 
 namespace BidCardCoin.Crtl
 {
@@ -35,8 +37,10 @@ namespace BidCardCoin.Crtl
             this.id_vente_enchere = id_vente_enchere_;
             this.date_vente_enchere = date_vente_enchere_;
             this.id_lieu = id_lieu_;
+            
         }
 
+         
         
         public event PropertyChangedEventHandler PropertyChanged;
 
