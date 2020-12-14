@@ -191,6 +191,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Resource Include="fonts\Ruda\Ruda-VariableFont_wght.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-Black.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-Bold.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-ExtraBold.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-Medium.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-Regular.ttf" />
+    <Resource Include="fonts\Ruda\static\Ruda-SemiBold.ttf" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -217,6 +224,16 @@
       <Project>{c73383b9-d216-4c8b-9f0d-0f75c8b2a839}</Project>
       <Name>ConnectMySQL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\account.png" />
+    <Resource Include="images\gavel.png" />
+    <Resource Include="images\home.png" />
+    <Resource Include="images\sign-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fonts\Ruda\OFL.txt" />
+    <Resource Include="fonts\Ruda\README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

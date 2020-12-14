@@ -38,7 +38,7 @@ namespace BidCardCoin.DAL
 
         public static void updateEnchere(EnchereDAO p)
         {
-            string query = "UPDATE vente_enchere set date_vente_enchere=\"" + p.date_vente_enchere + "\", id_lieu=\"" + p.id_lieu + "\" where id_enchere=" + p.id_vente_enchere + ";";
+            string query = "UPDATE vente_enchere set date_vente_enchere=\"" + p.date_vente_enchere + "\", id_lieu=\"" + p.id_lieu + "\" where id_vente_enchere=" + p.id_vente_enchere + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();

@@ -8,28 +8,36 @@
         Title="SecondaryWindow">
     <!-- WindowState="Maximized" WindowStyle="None"-->
     <Grid >
-        <Button Content="❌" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnExit"></Button>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="458*"/>
+        </Grid.RowDefinitions>
+        <Button Content="❌" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnExit" Margin="0,0,-0.4,0" Height="18" Grid.RowSpan="2" Width="20"></Button>
+
         <StackPanel Name="NavBar" Orientation="Horizontal" VerticalAlignment="Top" 
-                    HorizontalAlignment="Center" StackPanel.ZIndex="1">
-            <Button Click="btnEnchere" Height="40" Width="75">Voir Enchere</Button>
-            <Button Click="btnLot" Height="40" Width="75">Voir Lot</Button>
-            <Button Click="btnProduit" Height="40" Width="75">Voir produit</Button>
-            <Button Click="btnCategorie" Height="40" Width="75">Voir Categorie</Button>
-            <Button Click="btnLieu" Height="40" Width="75">Voir Lieu</Button>
-            <Button Click="btnPersonne" Height="40" Width="75">Voir Personnes</Button>
+                    HorizontalAlignment="Left" StackPanel.ZIndex="1" Margin="54,0,-0.4,0" Grid.RowSpan="3" Width="708" Height="48">
+            <Button Click="btnEnchere" Height="48" Width="90" Background="{x:Null}" BorderBrush="{x:Null}" Content="Enchères" FontFamily="Berlin Sans FB" FontSize="18"/>
+            <Button Click="btnLot" Height="48" Width="62" Background="{x:Null}" BorderBrush="{x:Null}" Content="Lots" FontFamily="Berlin Sans FB" FontSize="18"/>
+            <Button Click="btnProduit" Height="48" Width="90" BorderBrush="{x:Null}" Background="{x:Null}" Content="Produits" FontFamily="Berlin Sans FB" FontSize="18"/>
+            <Button Click="btnCategorie" Height="48" Width="90" Background="{x:Null}" BorderBrush="{x:Null}" Content="Catégories" FontFamily="Berlin Sans FB" FontSize="18"/>
+            <Button Click="btnLieu" Height="48" Width="90" Background="{x:Null}" BorderBrush="{x:Null}" Content="Lieux" FontFamily="Berlin Sans FB" FontSize="18"/>
+            <Button Click="btnPersonne" Height="48" Width="90" Background="{x:Null}" BorderBrush="{x:Null}" Content="Utilisateurs" FontFamily="Berlin Sans FB" FontSize="18"/>
         </StackPanel>
-        
-        
-        
-        <StackPanel Name="home_button" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Button Click="btnLogout" Height="40" Width="40">Retour</Button>
+        <Rectangle Fill="#FFD7385E" Stroke="Black" Panel.ZIndex="-5" Grid.RowSpan="2" Height="47.2" VerticalAlignment="Top" UseLayoutRounding="False"/>
+
+
+
+        <StackPanel Name="home_button" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.RowSpan="2" Height="47" Width="54">
+            <Button Click="btnLogout" Height="47" Width="54" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Source="/images/home.png" Height="37" Width="44" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            </Button>
         </StackPanel>
-        <StackPanel Name="stkTest" >
-            <Label Content="Secondary Window" StackPanel.ZIndex="0" Margin="0 50 0 0" ></Label>  
-            <TextBlock> Bienvenu sur le site de BidCardCoin en espérant que vous apprécierez notre site </TextBlock>
+        <StackPanel Name="stkTest" Margin="0,0,-0.4,-0.4" Grid.RowSpan="3" >
+            <Label Content="Secondary Window" Panel.ZIndex="0" Margin="0,50,-0.4,0" />
+            <TextBlock Margin="0,0,-0.4,0" HorizontalAlignment="Left" Width="762"><Run Text="Bienvenu sur le site de BidCardCoin en espérant que vous apprécierez notre site"/></TextBlock>
         </StackPanel>
-        
-        
+
+
     </Grid>
 </Window>
