@@ -5,7 +5,6 @@ using System.Windows.Controls;
 using BidCardCoin.Crtl;
 using BidCardCoin.ORM;
 using BidCardCoin.Views;
-using Renci.SshNet;
 
 namespace BidCardCoin.Vue
 {

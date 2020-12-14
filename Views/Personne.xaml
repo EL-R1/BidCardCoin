@@ -15,7 +15,8 @@
                       Height="300"
                       ScrollViewer.CanContentScroll="True" 
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
-                      ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      SelectionChanged="listePersonnes_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="*" Header="ID" Binding="{Binding id, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="nom" Binding="{Binding nom, Mode=TwoWay}" />
@@ -23,6 +24,7 @@
                     <DataGridTextColumn Width="*" Header="age" Binding="{Binding age, Mode=TwoWay}" />
                 </DataGrid.Columns>
             </DataGrid>
+            <Button Content="Supprimer" MouseDoubleClick="supprimerPersonne" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>
             <Button Click="btnAjouter" Height="40" Width="40">Ajouter</Button>
         </StackPanel>
     </Grid>
