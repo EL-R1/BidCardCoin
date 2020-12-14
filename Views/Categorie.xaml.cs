@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using BidCardCoin.Crtl;
@@ -18,6 +19,7 @@ namespace BidCardCoin.Views
         CategorieViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Categorie par exemple.
         ObservableCollection<CategorieViewModel> lp;
         int compteur = 0;
+        int selectedCategorieId;
         
         void loadCategories()
         {
@@ -26,6 +28,15 @@ namespace BidCardCoin.Views
             //LIEN AVEC la VIEW
             listeCategories.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.
         }
+
+        private void listeCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if ((listeCategories.SelectedIndex < lp.Count) && (listeCategories.SelectedIndex >= 0))
+            {
+                selectedCategorieId = (lp.ElementAt<CategorieViewModel>(listeCategories.SelectedIndex)).id_categorie;
+            }
+        }
+
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
             Ajout_categorie ucObj = new Ajout_categorie();

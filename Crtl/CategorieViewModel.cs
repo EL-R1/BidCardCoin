@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using BidCardCoin.Annotations;
+using BidCardCoin.ORM;
 
 namespace BidCardCoin.Crtl
 {
@@ -19,7 +20,7 @@ namespace BidCardCoin.Crtl
         public string nom
         {
             get { return _nom; }
-            set { _nom = value; }
+            set { _nom = value; OnPropertyChanged("nom"); }
         }
 
 
@@ -32,10 +33,17 @@ namespace BidCardCoin.Crtl
         
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+
+
+        private void OnPropertyChanged(string info)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(info));
+                this.PropertyChanged(this, new PropertyChangedEventArgs(info));
+                CategorieORM.updateCategorie(this);
+            }
         }
     }
 }

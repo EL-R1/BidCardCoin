@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BidCardCoin"
         mc:Ignorable="d"
-        Title="MainWindow" WindowState="Maximized" WindowStyle="None">
+        Title="MainWindow">
+    <!-- WindowState="Maximized" WindowStyle="None"-->
     <Grid>
         <Button Content="❌" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnExit" StackPanel.ZIndex="1"></Button>
         

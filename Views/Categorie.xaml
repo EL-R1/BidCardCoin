@@ -15,7 +15,8 @@
                       Height="300"
                       ScrollViewer.CanContentScroll="True" 
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
-                      ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      SelectionChanged="listeCategories_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="*" Header="Id" Binding="{Binding id_categorie, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding nom, Mode=TwoWay}" />
