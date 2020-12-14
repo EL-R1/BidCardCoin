@@ -20,7 +20,6 @@ namespace BidCardCoin.Views
         ObservableCollection<LieuViewModel> lp;
         int compteur = 0;
         int selectedLieuId;
-        private object selectedLieuxId;
 
         void loadLieux()
         {
@@ -40,7 +39,7 @@ namespace BidCardCoin.Views
         {
             if ((listeLieux.SelectedIndex < lp.Count) && (listeLieux.SelectedIndex >= 0))
             {
-                selectedLieuxId = lp.ElementAt(listeLieux.SelectedIndex).id;
+                selectedLieuId = lp.ElementAt(listeLieux.SelectedIndex).id;
             }
         }
 
