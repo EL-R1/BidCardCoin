@@ -33,7 +33,7 @@ namespace BidCardCoin.Views
         {
             if ((listeCategories.SelectedIndex < lp.Count) && (listeCategories.SelectedIndex >= 0))
             {
-                selectedCategorieId = (lp.ElementAt<CategorieViewModel>(listeCategories.SelectedIndex)).id_categorie;
+                selectedCategorieId = lp.ElementAt(listeCategories.SelectedIndex).id_categorie;
             }
         }
 
@@ -42,6 +42,17 @@ namespace BidCardCoin.Views
             Ajout_categorie ucObj = new Ajout_categorie();
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
+        }
+
+        private void supprimerCategorie(object sender, RoutedEventArgs e)
+        {
+            if (listeCategories.SelectedItem is CategorieViewModel)
+            {
+                CategorieViewModel toRemove = (CategorieViewModel)listeCategories.SelectedItem;
+                lp.Remove(toRemove);
+                listeCategories.Items.Refresh();
+                CategorieORM.supprimerCategorie(selectedCategorieId);
+            }
         }
     }
 }

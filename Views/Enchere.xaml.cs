@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using BidCardCoin.Crtl;
@@ -17,6 +18,7 @@ namespace BidCardCoin.Vue
         EnchereViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Enchere par exemple.
         ObservableCollection<EnchereViewModel> lp;
         int compteur = 0;
+        int selectedEnchereId;
         
         void loadEncheres()
         {
@@ -31,6 +33,25 @@ namespace BidCardCoin.Vue
             Ajout_enchere ucObj = new Ajout_enchere();
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
+        }
+
+        private void listeEncheres_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if ((listeEncheres.SelectedIndex < lp.Count) && (listeEncheres.SelectedIndex >= 0))
+            {
+                selectedEnchereId = lp.ElementAt(listeEncheres.SelectedIndex).id_vente_enchere;
+            }
+        }
+
+        private void supprimerEnchere(object sender, RoutedEventArgs e)
+        {
+            if (listeEncheres.SelectedItem is EnchereViewModel)
+            {
+                EnchereViewModel toRemove = (EnchereViewModel)listeEncheres.SelectedItem;
+                lp.Remove(toRemove);
+                listeEncheres.Items.Refresh();
+                EnchereORM.supprimerEnchere(selectedEnchereId);
+            }
         }
     }
 }

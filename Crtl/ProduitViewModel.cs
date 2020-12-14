@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using BidCardCoin.Annotations;
+using BidCardCoin.ORM;
 
 namespace BidCardCoin.Crtl
 {
@@ -22,7 +23,7 @@ namespace BidCardCoin.Crtl
         public int id_lot
         {
             get { return _id_lot; }
-            set { _id_lot = value; }
+            set { _id_lot = value; OnPropertyChanged("id_lot"); }
         }
 
         private float _prix_depart;
@@ -30,7 +31,7 @@ namespace BidCardCoin.Crtl
         public float prix_depart
         {
             get { return _prix_depart; }
-            set { _prix_depart = value; }
+            set { _prix_depart = value; OnPropertyChanged("prix_depart"); }
         }
 
         private string _description;
@@ -38,7 +39,7 @@ namespace BidCardCoin.Crtl
         public string description
         {
             get { return _description; }
-            set { _description = value; }
+            set { _description = value; OnPropertyChanged("description"); }
         }
 
         private string _date_vente;
@@ -46,7 +47,7 @@ namespace BidCardCoin.Crtl
         public string date_vente
         {
             get { return _date_vente; }
-            set { _date_vente = value; }
+            set { _date_vente = value; OnPropertyChanged("date_vente"); }
         }
 
         private float _estimation;
@@ -54,7 +55,7 @@ namespace BidCardCoin.Crtl
         public float estimation
         {
             get { return _estimation; }
-            set { _estimation = value; }
+            set { _estimation = value; OnPropertyChanged("estimation"); }
         }
 
         private byte _is_vendu;
@@ -62,7 +63,7 @@ namespace BidCardCoin.Crtl
         public byte is_vendu
         {
             get { return _is_vendu; }
-            set { _is_vendu = value; }
+            set { _is_vendu = value; OnPropertyChanged("is_vendu"); }
         }
 
         private float _prix_reserve;
@@ -70,7 +71,7 @@ namespace BidCardCoin.Crtl
         public float prix_reserve
         {
             get { return _prix_reserve; }
-            set { _prix_reserve = value; }
+            set { _prix_reserve = value; OnPropertyChanged("prix_reserve"); }
         }
 
         private string _region;
@@ -78,7 +79,7 @@ namespace BidCardCoin.Crtl
         public string region
         {
             get { return _region; }
-            set { _region = value; }
+            set { _region = value; OnPropertyChanged("region"); }
         }
 
         private string _attribut;
@@ -86,7 +87,7 @@ namespace BidCardCoin.Crtl
         public string attribut
         {
             get { return _attribut; }
-            set { _attribut = value; }
+            set { _attribut = value; OnPropertyChanged("attribut"); }
         }
 
 
@@ -108,10 +109,15 @@ namespace BidCardCoin.Crtl
         
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void OnPropertyChanged(string info)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(info));
+                this.PropertyChanged(this, new PropertyChangedEventArgs(info));
+                ProduitORM.updateProduit(this);
+            }
         }
     }
 }

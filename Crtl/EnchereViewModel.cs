@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using BidCardCoin.Annotations;
+using BidCardCoin.ORM;
 
 namespace BidCardCoin.Crtl
 {
@@ -17,14 +18,14 @@ namespace BidCardCoin.Crtl
         public string date_vente_enchere
         {
             get { return _date_vente_enchere; }
-            set { _date_vente_enchere = value; }
+            set { _date_vente_enchere = value; OnPropertyChanged("date_vente_enchere"); }
         }
 
         private int _id_lieu;
         public int id_lieu
         {
             get { return _id_lieu; }
-            set { _id_lieu = value; }
+            set { _id_lieu = value; OnPropertyChanged("id_lieu"); }
         }
 
         public EnchereViewModel(){}
@@ -39,10 +40,15 @@ namespace BidCardCoin.Crtl
         
         public event PropertyChangedEventHandler PropertyChanged;
 
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void OnPropertyChanged(string info)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(info));
+                this.PropertyChanged(this, new PropertyChangedEventArgs(info));
+                EnchereORM.updateEnchere(this);
+            }
         }
     }
 }

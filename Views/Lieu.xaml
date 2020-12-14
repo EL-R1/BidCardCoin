@@ -15,7 +15,8 @@
                       Height="300"
                       ScrollViewer.CanContentScroll="True" 
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
-                      ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      SelectionChanged="listeLieux_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="*" Header="Id" Binding="{Binding id_lieu, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding nom, Mode=TwoWay}" />
@@ -24,6 +25,7 @@
                     <DataGridTextColumn Width="*" Header="Code Postal" Binding="{Binding code_postal, Mode=TwoWay}" />
                 </DataGrid.Columns>
             </DataGrid>
+            <Button Content="Supprimer" MouseDoubleClick="supprimerLieu" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>
             <Button Click="btnAjouter" Height="40" Width="40">Ajouter</Button>
         </StackPanel>
     </Grid>
