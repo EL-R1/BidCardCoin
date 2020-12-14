@@ -1,4 +1,8 @@
-﻿namespace BidCardCoin
+﻿using System.Windows;
+using BidCardCoin.Vue;
+
+
+namespace BidCardCoin
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -9,15 +13,19 @@
         {
             InitializeComponent();
         }
+        
 
-        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        private void BtnNext(object sender, RoutedEventArgs routedEventArgs)
         {
-
+            SecondaryWindow secondaryWindow = new SecondaryWindow();
+            this.Close();
+            secondaryWindow.Show();
+        }
+        
+        private void btnExit(object sender, RoutedEventArgs routedEventArgs)
+        {
+            this.Close();
         }
 
-        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-
-        }
     }
 }

@@ -34,33 +34,140 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604">
+      <HintPath>..\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net45\K4os.Compression.LZ4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net45\K4os.Compression.LZ4.Streams.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net45\K4os.Hash.xxHash.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mscorlib" />
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\netstandard1.1\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard1.1\System.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <HintPath>..\packages\MySql.Data.8.0.22\lib\net452\Zstandard.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Views\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Crtl\CategorieViewModel.cs" />
+    <Compile Include="Crtl\EnchereViewModel.cs" />
+    <Compile Include="Crtl\LieuViewModel.cs" />
+    <Compile Include="Crtl\LotViewModel.cs" />
+    <Compile Include="Crtl\ProduitViewModel.cs" />
+    <Compile Include="DAL\CategorieDAL.cs" />
+    <Compile Include="DAL\DALConnection.cs" />
+    <Compile Include="DAL\EnchereDAL.cs" />
+    <Compile Include="DAL\LieuDAL.cs" />
+    <Compile Include="DAL\LotDAL.cs" />
+    <Compile Include="DAL\ProduitDAL.cs" />
+    <Compile Include="DAO\CategorieDAO.cs" />
+    <Compile Include="DAO\EnchereDAO.cs" />
+    <Compile Include="DAO\LieuDAO.cs" />
+    <Compile Include="DAO\LotDAO.cs" />
+    <Compile Include="DAO\ProduitDAO.cs" />
+    <Compile Include="ORM\CategorieORM.cs" />
+    <Compile Include="ORM\EnchereORM.cs" />
+    <Compile Include="ORM\LieuORM.cs" />
+    <Compile Include="ORM\LotORM.cs" />
+    <Compile Include="ORM\ProduitORM.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Views\Ajout_categorie.xaml.cs">
+      <DependentUpon>Ajout_categorie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_enchere.xaml.cs">
+      <DependentUpon>Ajout_enchere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_Lieu.xaml.cs">
+      <DependentUpon>Ajout_Lieu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_lot.xaml.cs">
+      <DependentUpon>Ajout_lot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_produit.xaml.cs">
+      <DependentUpon>Ajout_produit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Categorie.xaml.cs">
+      <DependentUpon>Categorie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Enchere.xaml.cs">
+      <DependentUpon>Enchere.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lieu.xaml.cs">
+      <DependentUpon>Lieu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lot.xaml.cs">
+      <DependentUpon>Lot.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Produit.xaml.cs">
+      <DependentUpon>Produit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SecondaryWindow.xaml.cs">
+      <DependentUpon>SecondaryWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -79,24 +186,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Resource Include="fonts\Ruda\Ruda-VariableFont_wght.ttf" />
-    <Resource Include="fonts\Ruda\static\Ruda-Black.ttf" />
-    <Resource Include="fonts\Ruda\static\Ruda-Bold.ttf" />
-    <Resource Include="fonts\Ruda\static\Ruda-ExtraBold.ttf" />
-    <Resource Include="fonts\Ruda\static\Ruda-Medium.ttf" />
-    <Resource Include="fonts\Ruda\static\Ruda-Regular.ttf" />
-    <Resource Include="fonts\Ruda\static\Ruda-SemiBold.ttf" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\account.png" />
+    <Page Include="Views\Ajout_categorie.xaml" />
+    <Page Include="Views\Ajout_enchere.xaml" />
+    <Page Include="Views\Ajout_Lieu.xaml" />
+    <Page Include="Views\Ajout_lot.xaml" />
+    <Page Include="Views\Ajout_produit.xaml" />
+    <Page Include="Views\Categorie.xaml" />
+    <Page Include="Views\Enchere.xaml" />
+    <Page Include="Views\Lieu.xaml" />
+    <Page Include="Views\Lot.xaml" />
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Produit.xaml" />
+    <Page Include="Views\SecondaryWindow.xaml" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="images\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="fonts\Ruda\OFL.txt" />
-    <Resource Include="fonts\Ruda\README.txt" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
