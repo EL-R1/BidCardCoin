@@ -8,7 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <StackPanel Name="stkTest" VerticalAlignment="Center" HorizontalAlignment="Center" >
-            <Label Content="Enchere" StackPanel.ZIndex="0" Margin="0 50 0 0" ></Label>
+            <Label Content="Enchere" StackPanel.ZIndex="1" Margin="0 50 0 0" ></Label>
             
             
             <DataGrid Name="listeEncheres" ItemsSource="{Binding}" AutoGenerateColumns="false" Margin="200,0"  Grid.ColumnSpan="2" BorderBrush="Black" Background="#FFA4A4A4"

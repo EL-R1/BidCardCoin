@@ -13,7 +13,7 @@ namespace BidCardCoin.Crtl
         public int id
         {
             get { return _id_lieu; }
-            set { _id_lieu = value; OnPropertyChanged("id_lieu"); }
+            set { _id_lieu = value; }
         }
 
         private string _nom;
