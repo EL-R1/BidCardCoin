@@ -13,7 +13,11 @@
             <Grid Name ="grigrid" VerticalAlignment="Top">
                 <StackPanel>
                     <Label Content="Id Vente enchere"></Label>
-                    <TextBox Name="id_vente_enchere" Text="{Binding id_vente_enchere, Mode=TwoWay}"  Height="20" />
+                    <ComboBox Name="ComboBoxEnchere"
+                              DisplayMemberPath="id"
+                              SelectedValuePath="id"
+                              ItemsSource="{Binding}"
+                              SelectedValue="{Binding id_vente_enchere}"/>
                     
                     <Label Content="Description"></Label>
                     <TextBox Name="description" Text="{Binding description, Mode=TwoWay}"  Height="20"  />

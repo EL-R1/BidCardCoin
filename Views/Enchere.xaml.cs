@@ -66,5 +66,6 @@ namespace BidCardCoin.Vue
                 EnchereORM.supprimerEnchere(selectedEnchereId);
             }
         }
+        
     }
 }

@@ -11,7 +11,11 @@
             <Label Content="Ajout produit" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
             
             <Label Content="Id de Lot"></Label>
-            <TextBox Name="id_lot" PreviewTextInput="FloatOnly" Text="{Binding id_lot, Mode=TwoWay}"/>
+            <ComboBox Name="ComboBoxLot"
+                      DisplayMemberPath="id"
+                      SelectedValuePath="id"
+                      ItemsSource="{Binding}"
+                      SelectedValue="{Binding id_lot}"/>
             
             <Label Content="Prix de départ"></Label>
             <TextBox Name="prix_de_depart" PreviewTextInput="FloatOnly" Text="{Binding prix_depart, Mode=TwoWay}"/>

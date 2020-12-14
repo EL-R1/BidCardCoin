@@ -18,10 +18,15 @@ namespace BidCardCoin.Views
             
             loadLots();
 
+            loadEncheres();
+
             appliquerContexte();
 
             gererEventSupplémentaires();
         }
+        
+        
+
         
         LotViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Lot par exemple.
         ObservableCollection<LotViewModel> lp;
@@ -36,10 +41,21 @@ namespace BidCardCoin.Views
         
         }
         
+        EnchereViewModel myDataObjectEnchere; // Objet de liaison avec la vue lors de l'ajout d'une Lot par exemple.
+        ObservableCollection<EnchereViewModel> en;
+        void loadEncheres()
+        {
+            en = EnchereORM.listeEncheres();
+            myDataObjectEnchere = new EnchereViewModel();
+            ComboBoxEnchere.ItemsSource = en;
+            //LIEN AVEC la VIEW
+            /*listeEncheres.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.*/
+        
+        }
         void appliquerContexte()
         {
             // Lien avec les textbox
-            id_vente_enchere.DataContext = myDataObject;
+            ComboBoxEnchere.DataContext = myDataObject;
             description.DataContext = myDataObject;
         }
 
@@ -67,7 +83,7 @@ namespace BidCardCoin.Views
 
             // Comme le contexte des élément de la vue est encore l'ancien LotViewModel,
             // On refait les liens entre age, slider, textbox, bouton et le nouveau LotViewModel
-            id_vente_enchere.DataContext = myDataObject;
+            ComboBoxEnchere.DataContext = myDataObject;
             description.DataContext = myDataObject;
         }
     }
