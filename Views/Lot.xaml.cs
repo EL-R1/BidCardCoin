@@ -40,7 +40,7 @@ using System.Windows.Input;
         {
             if ((listeLots.SelectedIndex < lp.Count) && (listeLots.SelectedIndex >= 0))
             {
-                selectedLotsId = lp.ElementAt(listeLots.SelectedIndex).id_lot;
+                selectedLotsId = lp.ElementAt(listeLots.SelectedIndex).id;
             }
         }
 

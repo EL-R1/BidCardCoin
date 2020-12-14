@@ -40,7 +40,7 @@ namespace BidCardCoin.Views
         {
             if ((listeLieux.SelectedIndex < lp.Count) && (listeLieux.SelectedIndex >= 0))
             {
-                selectedLieuxId = lp.ElementAt(listeLieux.SelectedIndex).id_lieu;
+                selectedLieuxId = lp.ElementAt(listeLieux.SelectedIndex).id;
             }
         }
 

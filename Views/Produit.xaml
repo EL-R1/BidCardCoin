@@ -18,7 +18,7 @@
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       SelectionChanged="listeCategories_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="id" Binding="{Binding id_produit, Mode=OneWay}" />
+                    <DataGridTextColumn Width="*" Header="id" Binding="{Binding id, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="id lot" Binding="{Binding id_lot}" />
                     <DataGridTextColumn Width="*" Header="prix de départ" Binding="{Binding prix_depart, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="description" Binding="{Binding description, Mode=TwoWay}" />

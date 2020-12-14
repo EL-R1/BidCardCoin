@@ -9,7 +9,7 @@ namespace BidCardCoin.Crtl
         public PersonneViewModel() {}
         
         private int _id_personne;
-        public int id_personne
+        public int id
         {
             get { return _id_personne; }
             set { _id_personne = value; }
@@ -39,7 +39,7 @@ namespace BidCardCoin.Crtl
 
         public PersonneViewModel(int id_personne_,string nom_,string email_,int age_)
         {
-            this.id_personne = id_personne_;
+            this.id = id_personne_;
             this.nom = nom_;
             this.email = email_;
             this.age = age_;

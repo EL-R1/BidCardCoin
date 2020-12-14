@@ -15,12 +15,12 @@
                     <DatePicker Name="date_vente_enchere" Text="{Binding date_vente_enchere,Mode=TwoWay}"></DatePicker>
                     
                     <Label Content="Id du Lieu"></Label>
+                    
                     <ComboBox Name="ComboBoxLieu"
                               DisplayMemberPath="adresse"
                               SelectedValuePath="id"
                               ItemsSource="{Binding}"
-                              SelectedValue="{Binding id_lieu}"
-                    />
+                              SelectedValue="{Binding id_lieu}"/>
                     
                 </StackPanel>
             </Grid>

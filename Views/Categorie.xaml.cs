@@ -33,7 +33,7 @@ namespace BidCardCoin.Views
         {
             if ((listeCategories.SelectedIndex < lp.Count) && (listeCategories.SelectedIndex >= 0))
             {
-                selectedCategorieId = lp.ElementAt(listeCategories.SelectedIndex).id_categorie;
+                selectedCategorieId = lp.ElementAt(listeCategories.SelectedIndex).id;
             }
         }
 

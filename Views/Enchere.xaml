@@ -18,7 +18,7 @@
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       SelectionChanged="listeEncheres_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="ID" Binding="{Binding id_vente_enchere, Mode=OneWay}" />
+                    <DataGridTextColumn Width="*" Header="ID" Binding="{Binding id, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="Date de la Vente aux enchères" Binding="{Binding date_vente_enchere, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="Id lieu" Binding="{Binding id_lieu, Mode=TwoWay}" />
                 </DataGrid.Columns>

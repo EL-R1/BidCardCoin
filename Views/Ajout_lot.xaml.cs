@@ -55,7 +55,7 @@ namespace BidCardCoin.Views
         }
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
-            myDataObject.id_lot = LotDAL.getMaxIdLot() + 1;
+            myDataObject.id = LotDAL.getMaxIdLot() + 1;
 
             lp.Add(myDataObject);
             LotORM.insertLot(myDataObject);

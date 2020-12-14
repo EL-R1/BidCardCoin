@@ -28,7 +28,7 @@ namespace BidCardCoin.ORM
 
         public static void updateLot(LotViewModel p)
         {
-            LotDAO.updateLot(new LotDAO(p.id_lot, p.id_vente_enchere, p.description));
+            LotDAO.updateLot(new LotDAO(p.id, p.id_vente_enchere, p.description));
         }
 
         public static void supprimerLot(int id)
@@ -38,7 +38,7 @@ namespace BidCardCoin.ORM
 
         public static void insertLot(LotViewModel p)
         {
-            LotDAO.insertLot(new LotDAO(p.id_lot, p.id_vente_enchere, p.description));
+            LotDAO.insertLot(new LotDAO(p.id, p.id_vente_enchere, p.description));
         }
     }
 }

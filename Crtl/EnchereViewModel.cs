@@ -10,7 +10,7 @@ namespace BidCardCoin.Crtl
     public class EnchereViewModel : INotifyPropertyChanged
     {
         private int _id_vente_enchere;
-        public int id_vente_enchere
+        public int id
         {
             get { return _id_vente_enchere; }
             set { _id_vente_enchere = value; }
@@ -34,7 +34,7 @@ namespace BidCardCoin.Crtl
 
         public EnchereViewModel(int id_vente_enchere_,string date_vente_enchere_,int id_lieu_)
         {
-            this.id_vente_enchere = id_vente_enchere_;
+            this.id = id_vente_enchere_;
             this.date_vente_enchere = date_vente_enchere_;
             this.id_lieu = id_lieu_;
             
