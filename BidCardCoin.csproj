@@ -109,22 +109,26 @@
     <Compile Include="Crtl\EnchereViewModel.cs" />
     <Compile Include="Crtl\LieuViewModel.cs" />
     <Compile Include="Crtl\LotViewModel.cs" />
+    <Compile Include="Crtl\PersonneViewModel.cs" />
     <Compile Include="Crtl\ProduitViewModel.cs" />
     <Compile Include="DAL\CategorieDAL.cs" />
     <Compile Include="DAL\DALConnection.cs" />
     <Compile Include="DAL\EnchereDAL.cs" />
     <Compile Include="DAL\LieuDAL.cs" />
     <Compile Include="DAL\LotDAL.cs" />
+    <Compile Include="DAL\PersonneDAL.cs" />
     <Compile Include="DAL\ProduitDAL.cs" />
     <Compile Include="DAO\CategorieDAO.cs" />
     <Compile Include="DAO\EnchereDAO.cs" />
     <Compile Include="DAO\LieuDAO.cs" />
     <Compile Include="DAO\LotDAO.cs" />
+    <Compile Include="DAO\PersonneDAO.cs" />
     <Compile Include="DAO\ProduitDAO.cs" />
     <Compile Include="ORM\CategorieORM.cs" />
     <Compile Include="ORM\EnchereORM.cs" />
     <Compile Include="ORM\LieuORM.cs" />
     <Compile Include="ORM\LotORM.cs" />
+    <Compile Include="ORM\PersonneORM.cs" />
     <Compile Include="ORM\ProduitORM.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Views\Ajout_categorie.xaml.cs">
@@ -138,6 +142,9 @@
     </Compile>
     <Compile Include="Views\Ajout_lot.xaml.cs">
       <DependentUpon>Ajout_lot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_personne.xaml.cs">
+      <DependentUpon>Ajout_personne.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Ajout_produit.xaml.cs">
       <DependentUpon>Ajout_produit.xaml</DependentUpon>
@@ -157,6 +164,9 @@
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Personne.xaml.cs">
+      <DependentUpon>Personne.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Produit.xaml.cs">
       <DependentUpon>Produit.xaml</DependentUpon>
@@ -188,6 +198,7 @@
     <Page Include="Views\Ajout_enchere.xaml" />
     <Page Include="Views\Ajout_Lieu.xaml" />
     <Page Include="Views\Ajout_lot.xaml" />
+    <Page Include="Views\Ajout_personne.xaml" />
     <Page Include="Views\Ajout_produit.xaml" />
     <Page Include="Views\Categorie.xaml" />
     <Page Include="Views\Enchere.xaml" />
@@ -197,6 +208,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Personne.xaml" />
     <Page Include="Views\Produit.xaml" />
     <Page Include="Views\SecondaryWindow.xaml" />
   </ItemGroup>

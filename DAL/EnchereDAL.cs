@@ -14,7 +14,7 @@ namespace BidCardCoin.DAL
         public static ObservableCollection<EnchereDAO> selectEncheres()
         {
             ObservableCollection<EnchereDAO> l = new ObservableCollection<EnchereDAO>();
-            string query = "SELECT * FROM vente_enchere;";
+            string query = "SELECT * FROM vente_enchere ORDER BY id_vente_enchere ASC;";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataReader reader = null;
             try

@@ -38,7 +38,7 @@ namespace BidCardCoin.DAL
 
         public static void updateLieu(LieuDAO p)
         {
-            string query = "UPDATE lieu set nom=\"" + p.nom + "\", adresse=\"" + p.adresse + "\", ville=\"" + p.ville + "\", code_postal=\"" + p.code_postal + "\" where id_Lieu=" + p.id_lieu + ";";
+            string query = "UPDATE lieu set nom=\"" + p.nom + "\", adresse=\"" + p.adresse + "\", ville=\"" + p.ville + "\", code_postal=\"" + p.code_postal + "\" where id_Lieu=" + p.id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();

@@ -5,17 +5,16 @@ using System.Windows;
 using BidCardCoin.DAO;
 using MySql.Data.MySqlClient;
 
-
 namespace BidCardCoin.DAL
 {
-    public class CategorieDAL
+    public class PersonneDAL
     {
-        public CategorieDAL(){}
+        public PersonneDAL(){}
         
-        public static ObservableCollection<CategorieDAO> selectCategories()
+        public static ObservableCollection<PersonneDAO> selectPersonnes()
         {
-            ObservableCollection<CategorieDAO> l = new ObservableCollection<CategorieDAO>();
-            string query = "SELECT * FROM categorie;";
+            ObservableCollection<PersonneDAO> l = new ObservableCollection<PersonneDAO>();
+            string query = "SELECT * FROM personne;";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataReader reader = null;
             try
@@ -25,44 +24,44 @@ namespace BidCardCoin.DAL
 
                 while (reader.Read())
                 {
-                    CategorieDAO p = new CategorieDAO(reader.GetInt32(0), reader.GetString(1));
+                    PersonneDAO p = new PersonneDAO(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
                     l.Add(p);
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show("Il y a un problème dans la table Categorie : {0}",e.StackTrace);
+                MessageBox.Show("Il y a un problème dans la table Personne : {0}",e.StackTrace);
             }
             reader.Close();
             return l;
         }
 
-        public static void updateCategorie(CategorieDAO p)
+        public static void updatePersonne(PersonneDAO p)
         {
-            string query = "UPDATE categorie set nom=\"" + p.nom + "\" where id_categorie=" + p.id_categorie + ";";
+            string query = "UPDATE personne set nom=\"" + p.nom + "\", email=\"" + p.email + "\", age=\"" + p.age + "\" where id_personne=" + p.id_personne + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
         }
-        public static void insertCategorie(CategorieDAO p)
+        public static void insertPersonne(PersonneDAO p)
         {
-            int id = getMaxIdCategorie() + 1;
-            string query = "INSERT INTO Categorie VALUES (\"" + id + "\",\"" +  p.nom + "\");";
+            int id = getMaxIdPersonne() + 1;
+            string query = "INSERT INTO personne VALUES (\"" + id + "\",\"" +  p.nom + "\",\"" +  p.email + "\",\"" + p.age + "\");";
             MySqlCommand cmd2 = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd2);
             cmd2.ExecuteNonQuery();
         }
-        public static void supprimerCategorie(int id)
+        public static void supprimerPersonne(int id)
         {
-            string query = "DELETE FROM Categorie WHERE id_Categorie = \"" + id + "\";";
+            string query = "DELETE FROM personne WHERE id_personne = \"" + id + "\";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
         }
-        public static int getMaxIdCategorie()
+        public static int getMaxIdPersonne()
         {
-            int maxIdCategorie = 0;
-            string query = "SELECT MAX(id_categorie) FROM categorie;";
+            int maxIdPersonne = 0;
+            string query = "SELECT MAX(id_personne) FROM personne;";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
 
             int cnt = cmd.ExecuteNonQuery();
@@ -74,25 +73,25 @@ namespace BidCardCoin.DAL
                 reader.Read();
                 if (!reader.IsDBNull(0))
                 {
-                    maxIdCategorie = reader.GetInt32(0);
+                    maxIdPersonne = reader.GetInt32(0);
                 }
                 else
                 {
-                    maxIdCategorie = 0;
+                    maxIdPersonne = 0;
                 }
             }
             reader.Close();
-            return maxIdCategorie;
+            return maxIdPersonne;
         }
 
-        public static CategorieDAO getCategorie(int idCategorie)
+        public static PersonneDAO getPersonne(int idPersonne)
         {
-            string query = "SELECT * FROM categorie WHERE id_categorie=" + idCategorie + ";";
+            string query = "SELECT * FROM personne WHERE id_personne=" + idPersonne + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
-            CategorieDAO pers = new CategorieDAO(reader.GetInt32(0), reader.GetString(1));
+            PersonneDAO pers = new PersonneDAO(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
             reader.Close();
             return pers;
         }
