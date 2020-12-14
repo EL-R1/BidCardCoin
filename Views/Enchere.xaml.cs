@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using BidCardCoin.Crtl;
 using BidCardCoin.ORM;
 using BidCardCoin.Views;
+using Renci.SshNet;
 
 namespace BidCardCoin.Vue
 {
@@ -13,7 +14,11 @@ namespace BidCardCoin.Vue
         {
             InitializeComponent();
             loadEncheres();
+            loadLieux();
         }
+        LieuViewModel myDataObjectLieu; // Objet de liaison avec la vue lors de l'ajout d'une Enchere par exemple.
+        ObservableCollection<LieuViewModel> li;
+        
         EnchereViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Enchere par exemple.
         ObservableCollection<EnchereViewModel> lp;
         int compteur = 0;
@@ -24,8 +29,16 @@ namespace BidCardCoin.Vue
             myDataObject = new EnchereViewModel();
             //LIEN AVEC la VIEW
             listeEncheres.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.
-        
         }
+        
+        void loadLieux()
+        {
+            li = LieuORM.listeLieux();
+            myDataObjectLieu = new LieuViewModel();
+            //LIEN AVEC la VIEW
+            /*listeLieus.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.*/
+        }
+        
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
             Ajout_enchere ucObj = new Ajout_enchere();

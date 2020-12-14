@@ -5,7 +5,7 @@ namespace BidCardCoin.DAO
 {
     public class LieuDAO
     {
-        public int id_lieu;
+        public int id;
         public string nom;
         public string adresse;
         public string ville;
@@ -13,7 +13,7 @@ namespace BidCardCoin.DAO
 
         public LieuDAO(int id_lieu_,string nom_,string adresse_,string ville_,int code_postal_)
         {
-            this.id_lieu = id_lieu_;
+            this.id = id_lieu_;
             this.nom = nom_;
             this.adresse = adresse_;
             this.ville = ville_;

@@ -16,6 +16,7 @@
             <Button Click="btnProduit" Height="40" Width="75">Voir produit</Button>
             <Button Click="btnCategorie" Height="40" Width="75">Voir Categorie</Button>
             <Button Click="btnLieu" Height="40" Width="75">Voir Lieu</Button>
+            <Button Click="btnPersonne" Height="40" Width="75">Voir Personnes</Button>
         </StackPanel>
         
         

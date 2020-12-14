@@ -35,7 +35,7 @@ namespace BidCardCoin.Views
             myDataObject = new LieuViewModel();
             //LIEN AVEC la VIEW
             /*listeLieus.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.*/
-        
+
         }
         
         void appliquerContexte()
@@ -60,7 +60,7 @@ namespace BidCardCoin.Views
         }
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
-            myDataObject.id_lieu = LieuDAL.getMaxIdLieu() + 1;
+            myDataObject.id = LieuDAL.getMaxIdLieu() + 1;
 
             lp.Add(myDataObject);
             LieuORM.insertLieu(myDataObject);
