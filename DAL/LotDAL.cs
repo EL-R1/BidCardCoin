@@ -14,7 +14,7 @@ namespace BidCardCoin.DAL
         public static ObservableCollection<LotDAO> selectLots()
         {
             ObservableCollection<LotDAO> l = new ObservableCollection<LotDAO>();
-            string query = "SELECT * FROM lot;";
+            string query = "SELECT * FROM lot ORDER BY id_lot ASC;";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataReader reader = null;
             try

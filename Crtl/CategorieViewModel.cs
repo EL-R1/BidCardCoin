@@ -10,7 +10,7 @@ namespace BidCardCoin.Crtl
         public CategorieViewModel() {}
         
         private int _id_categorie;
-        public int id_categorie
+        public int id
         {
             get { return _id_categorie; }
             set { _id_categorie = value; }
@@ -26,7 +26,7 @@ namespace BidCardCoin.Crtl
 
         public CategorieViewModel(int id_categorie_,string nom_)
         {
-            this.id_categorie = id_categorie_;
+            this.id = id_categorie_;
             this.nom = nom_;
         }
 

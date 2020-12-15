@@ -56,7 +56,7 @@ namespace BidCardCoin.Views
         }
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
-            myDataObject.id_personne = PersonneDAL.getMaxIdPersonne() + 1;
+            myDataObject.id = PersonneDAL.getMaxIdPersonne() + 1;
 
             lp.Add(myDataObject);
             PersonneORM.insertPersonne(myDataObject);

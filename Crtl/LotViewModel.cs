@@ -10,7 +10,7 @@ namespace BidCardCoin.Crtl
         public LotViewModel() {}
         
         private int _id_lot;
-        public int id_lot
+        public int id
         {
             get { return _id_lot; }
             set { _id_lot = value; }
@@ -33,7 +33,7 @@ namespace BidCardCoin.Crtl
 
         public LotViewModel(int id_lot_,int id_vente_enchere_,string description_)
         {
-            this.id_lot = id_lot_;
+            this.id = id_lot_;
             this.id_vente_enchere = id_vente_enchere_;
             this.description = description_;
         }

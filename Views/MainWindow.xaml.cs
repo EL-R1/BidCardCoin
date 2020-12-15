@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using BidCardCoin.Vue;
 
 
@@ -13,7 +14,12 @@ namespace BidCardCoin
         {
             InitializeComponent();
         }
-        
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            var newTextBox = new TextBox();
+            // here set new textbox parameters
+            tbPanel.Children.Add(newTextBox);
+        }
 
         private void BtnNext(object sender, RoutedEventArgs routedEventArgs)
         {

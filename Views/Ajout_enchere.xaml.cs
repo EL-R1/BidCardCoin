@@ -74,7 +74,7 @@ namespace BidCardCoin.Views
         }
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
-            myDataObject.id_vente_enchere = EnchereDAL.getMaxIdEnchere() + 1;
+            myDataObject.id = EnchereDAL.getMaxIdEnchere() + 1;
 
             lp.Add(myDataObject);
             EnchereORM.insertEnchere(myDataObject);

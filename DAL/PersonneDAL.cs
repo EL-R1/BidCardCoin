@@ -14,7 +14,7 @@ namespace BidCardCoin.DAL
         public static ObservableCollection<PersonneDAO> selectPersonnes()
         {
             ObservableCollection<PersonneDAO> l = new ObservableCollection<PersonneDAO>();
-            string query = "SELECT * FROM personne;";
+            string query = "SELECT * FROM personne ORDER BY id_personne ASC;";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataReader reader = null;
             try

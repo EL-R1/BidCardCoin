@@ -54,7 +54,7 @@ namespace BidCardCoin.Views
         }
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
-            myDataObject.id_categorie = CategorieDAL.getMaxIdCategorie() + 1;
+            myDataObject.id = CategorieDAL.getMaxIdCategorie() + 1;
 
             lp.Add(myDataObject);
             CategorieORM.insertCategorie(myDataObject);
