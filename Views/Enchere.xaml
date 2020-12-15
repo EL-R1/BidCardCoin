@@ -26,7 +26,7 @@
 
             <Button Content="Supprimer" MouseDoubleClick="supprimerEnchere" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>
 
-            <Button Click="btnAjouter" Height="40" Width="40">Ajouter</Button>
+            <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="BidCardCoin.Views.Ajout_Achat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BidCardCoin.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel Name="stkTest" >
+            <Label Content="Ajouter une Achat" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
+            
+            <Grid Name ="grigrid" VerticalAlignment="Top">
+                <StackPanel>
+                    <Label Content="Acheteur"></Label>
+                    <ComboBox Name="ComboBoxAcheteur"
+                              DisplayMemberPath="id"
+                              SelectedValuePath="id"
+                              ItemsSource="{Binding}"
+                              SelectedValue="{Binding id_acheteur}"/>
+                    
+                    <Label Content="Produit"></Label>
+                    <ComboBox Name="ComboBoxProduit"
+                              DisplayMemberPath="description"
+                              SelectedValuePath="id"
+                              ItemsSource="{Binding}"
+                              SelectedValue="{Binding id_produit}"/>
+                    
+                    <Label Content="Prix"></Label>
+                    <TextBox Name="prix" Text="{Binding prix, Mode=TwoWay}"  Height="20"  />
+                    
+                    <Label Content="Is Live ?"></Label>
+                    <TextBox Name="is_live" Text="{Binding is_live, Mode=TwoWay}"  Height="20"  />
+                    
+                    <Label Content="Is Telephone ?"></Label>
+                    <TextBox Name="is_telephone" Text="{Binding is_telephone, Mode=TwoWay}"  Height="20"  />
+                </StackPanel>
+            </Grid>
+            
+            <Button Click="btnAjouter" Height="40" Width="50">Ajouter</Button>
+            
+            <Button Click="btnReturn" Height="40" Width="40">Retour</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

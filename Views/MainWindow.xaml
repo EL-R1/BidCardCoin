@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BidCardCoin"
         mc:Ignorable="d"
-        Title="MainWindow">
+        Title="MainWindow" WindowState="Maximized" WindowStyle="None">
     <!-- WindowState="Maximized" WindowStyle="None"-->
     <Grid>
         <Button Content="❌" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnExit" StackPanel.ZIndex="1"></Button>
         
-        <StackPanel>
+        <StackPanel Name="tbPanel">
             <Label Content="Login" StackPanel.ZIndex="0" ></Label>
             <Button Content="Login" Height="75" Width="75" Click="BtnNext"></Button>
+            <Button Content="Add Metric" Width="100" HorizontalAlignment="Center" Height="30" Grid.Row="1" Grid.Column="0" Click="button1_Click"/>
             
             
             <!--<Button Name="button" Content="Hello" Height="75" Width="75" Click="btnExit">

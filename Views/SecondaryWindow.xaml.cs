@@ -52,6 +52,31 @@ namespace BidCardCoin.Vue
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
         }
+        private void btnAcheteur(object sender, RoutedEventArgs e)
+        {
+            Acheteur ucObj = new Acheteur();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
+        private void btnVendeur(object sender, RoutedEventArgs e)
+        {
+            Vendeur ucObj = new Vendeur();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
+        
+        private void btnCommissaire_Priseur(object sender, RoutedEventArgs e)
+        {
+            Commissaire_Priseur ucObj = new Commissaire_Priseur();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
+        private void btnOrdre_Achat(object sender, RoutedEventArgs e)
+        {
+            Ordre_Achat ucObj = new Ordre_Achat();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
         
         private void btnExit(object sender, RoutedEventArgs routedEventArgs)
         {

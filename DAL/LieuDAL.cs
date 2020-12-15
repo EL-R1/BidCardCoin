@@ -14,7 +14,7 @@ namespace BidCardCoin.DAL
         public static ObservableCollection<LieuDAO> selectLieux()
         {
             ObservableCollection<LieuDAO> l = new ObservableCollection<LieuDAO>();
-            string query = "SELECT * FROM lieu;";
+            string query = "SELECT * FROM lieu ORDER BY id_lieu ASC;";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataReader reader = null;
             try

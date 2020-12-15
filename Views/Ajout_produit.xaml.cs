@@ -38,7 +38,7 @@ namespace BidCardCoin.Views
             lot = LotORM.listeLots();
             myDataObjectLot = new LotViewModel();
             //LIEN AVEC la VIEW
-            ComboBoxLot.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.
+            ComboBoxLot.ItemsSource = lot; // bind de la liste avec la source, permettant le binding.
         }
         private void btnReturn(object sender, RoutedEventArgs e)
         {

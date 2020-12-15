@@ -25,8 +25,8 @@
                 </StackPanel>
             </Grid>
             
-            <Button Click="btnAjouter" Height="40" Width="50" >Ajouter</Button>
-            <Button Click="btnReturn" Height="40" Width="40">Retour</Button>
+            <Button Click="btnAjouter" Height="40" Width="100" >Ajouter</Button>
+            <Button Click="btnReturn" Height="40" Width="100">Retour</Button>
         </StackPanel>
     </Grid>
 </UserControl>
