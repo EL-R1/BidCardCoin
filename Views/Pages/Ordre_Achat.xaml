@@ -19,8 +19,8 @@
                       SelectionChanged="listeOrdre_Achats_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="*" Header="ID" Binding="{Binding id, Mode=OneWay}" />
-                    <DataGridTextColumn Width="*" Header="ID produit" Binding="{Binding id_produit, Mode=OneWay}" />
-                    <DataGridTextColumn Width="*" Header="Id acheteur" Binding="{Binding id_acheteur, Mode=OneWay}" />
+                    <DataGridTextColumn Width="*" Header="ID produit" Binding="{Binding id_produit, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="Id acheteur" Binding="{Binding id_acheteur, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="Montant" Binding="{Binding montant, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="Date d'achat" Binding="{Binding date_achat, Mode=TwoWay}" />
                     
