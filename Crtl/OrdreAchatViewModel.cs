@@ -20,28 +20,28 @@ namespace BidCardCoin.Crtl
         public int id_produit
         {
             get { return _id_produit; }
-            set { _id_produit = value; }
+            set { _id_produit = value; OnPropertyChanged("id_produit"); }
         }
 
         private int _id_acheteur;
         public int id_acheteur
         {
             get { return _id_acheteur; }
-            set { _id_acheteur = value; }
+            set { _id_acheteur = value; OnPropertyChanged("id_acheteur"); }
         }
 
         private double _montant;
         public double montant
         {
             get { return _montant; }
-            set { _montant = value; }
+            set { _montant = value; OnPropertyChanged("montant"); }
         }
 
         private string _date_achat;
         public string date_achat
         {
             get { return _date_achat; }
-            set { _date_achat = value; }
+            set { _date_achat = value; OnPropertyChanged("date_achat"); }
         }
 
 

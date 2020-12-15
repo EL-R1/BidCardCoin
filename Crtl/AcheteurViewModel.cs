@@ -20,14 +20,14 @@ namespace BidCardCoin.Crtl
         public int id_personne
         {
             get { return _id_personne; }
-            set { _id_personne = value; }
+            set { _id_personne = value; OnPropertyChanged("id_personne"); }
         }
 
         private byte _is_solvable;
         public byte is_solvable
         {
             get { return _is_solvable; }
-            set { _is_solvable = value; }
+            set { _is_solvable = value; OnPropertyChanged("is_solvable"); }
         }
 
 

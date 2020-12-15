@@ -19,8 +19,8 @@
                       SelectionChanged="listeCommissaire_Priseurs_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="*" Header="ID" Binding="{Binding id, Mode=OneWay}" />
-                    <DataGridTextColumn Width="*" Header="ID produit" Binding="{Binding id_produit, Mode=OneWay}" />
-                    <DataGridTextColumn Width="*" Header="ID personne" Binding="{Binding id_personne, Mode=OneWay}" />
+                    <DataGridTextColumn Width="*" Header="ID produit" Binding="{Binding id_produit, Mode=TwoWay}" />
+                    <DataGridTextColumn Width="*" Header="ID personne" Binding="{Binding id_personne, Mode=TwoWay}" />
                 </DataGrid.Columns>
             </DataGrid>
             <Button Content="Supprimer" MouseDoubleClick="supprimerCommissaire_Priseur" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>

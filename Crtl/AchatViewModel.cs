@@ -27,21 +27,21 @@ namespace BidCardCoin.Crtl
         public double prix
         {
             get { return _prix; }
-            set { _prix = value; }
+            set { _prix = value; OnPropertyChanged("prix"); }
         }
 
         private byte _is_live;
         public byte is_live
         {
             get { return _is_live; }
-            set { _is_live = value; }
+            set { _is_live = value; OnPropertyChanged("is_live"); }
         }
 
         private byte _is_telephone;
         public byte is_telephone
         {
             get { return _is_telephone; }
-            set { _is_telephone = value; }
+            set { _is_telephone = value; OnPropertyChanged("is_telephone"); }
         }
 
 

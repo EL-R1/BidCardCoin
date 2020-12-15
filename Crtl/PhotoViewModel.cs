@@ -20,7 +20,7 @@ namespace BidCardCoin.Crtl
         public int id_produit
         {
             get { return _id_produit; }
-            set { _id_produit = value; }
+            set { _id_produit = value; OnPropertyChanged("id_produit"); }
         }
 
 

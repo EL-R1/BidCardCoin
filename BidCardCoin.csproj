@@ -155,83 +155,83 @@
     <Compile Include="ORM\ProduitORM.cs" />
     <Compile Include="ORM\VendeurORM.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="Views\Achat.xaml.cs">
+    <Compile Include="Views\Pages\Achat.xaml.cs">
       <DependentUpon>Achat.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Acheteur.xaml.cs">
+    <Compile Include="Views\Pages\Acheteur.xaml.cs">
       <DependentUpon>Acheteur.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_Achat.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_Achat.xaml.cs">
       <DependentUpon>Ajout_Achat.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_acheteur.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_acheteur.xaml.cs">
       <DependentUpon>Ajout_acheteur.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_categorie.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_categorie.xaml.cs">
       <DependentUpon>Ajout_categorie.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_commissaire_priseur.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_commissaire_priseur.xaml.cs">
       <DependentUpon>Ajout_commissaire_priseur.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_enchere.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_enchere.xaml.cs">
       <DependentUpon>Ajout_enchere.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_Lieu.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_Lieu.xaml.cs">
       <DependentUpon>Ajout_Lieu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_lot.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_lot.xaml.cs">
       <DependentUpon>Ajout_lot.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_ordre_achat.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_ordre_achat.xaml.cs">
       <DependentUpon>Ajout_ordre_achat.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_personne.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_personne.xaml.cs">
       <DependentUpon>Ajout_personne.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_Photo.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_Photo.xaml.cs">
       <DependentUpon>Ajout_Photo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_produit.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_produit.xaml.cs">
       <DependentUpon>Ajout_produit.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Ajout_Vendeur.xaml.cs">
+    <Compile Include="Views\Ajouts\Ajout_Vendeur.xaml.cs">
       <DependentUpon>Ajout_Vendeur.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Categorie.xaml.cs">
+    <Compile Include="Views\Pages\Categorie.xaml.cs">
       <DependentUpon>Categorie.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Commissaire_Priseur.xaml.cs">
+    <Compile Include="Views\Pages\Commissaire_Priseur.xaml.cs">
       <DependentUpon>Commissaire_Priseur.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Enchere.xaml.cs">
+    <Compile Include="Views\Pages\Enchere.xaml.cs">
       <DependentUpon>Enchere.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Lieu.xaml.cs">
+    <Compile Include="Views\Pages\Lieu.xaml.cs">
       <DependentUpon>Lieu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Lot.xaml.cs">
+    <Compile Include="Views\Pages\Lot.xaml.cs">
       <DependentUpon>Lot.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\Ordre_Achat.xaml.cs">
+    <Compile Include="Views\Pages\Ordre_Achat.xaml.cs">
       <DependentUpon>Ordre_Achat.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Personne.xaml.cs">
+    <Compile Include="Views\Pages\Personne.xaml.cs">
       <DependentUpon>Personne.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Photo.xaml.cs">
+    <Compile Include="Views\Pages\Photo.xaml.cs">
       <DependentUpon>Photo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Produit.xaml.cs">
+    <Compile Include="Views\Pages\Produit.xaml.cs">
       <DependentUpon>Produit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SecondaryWindow.xaml.cs">
       <DependentUpon>SecondaryWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Vendeur.xaml.cs">
+    <Compile Include="Views\Pages\Vendeur.xaml.cs">
       <DependentUpon>Vendeur.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -261,35 +261,35 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Views\Achat.xaml" />
-    <Page Include="Views\Acheteur.xaml" />
-    <Page Include="Views\Ajout_Achat.xaml" />
-    <Page Include="Views\Ajout_acheteur.xaml" />
-    <Page Include="Views\Ajout_categorie.xaml" />
-    <Page Include="Views\Ajout_commissaire_priseur.xaml" />
-    <Page Include="Views\Ajout_enchere.xaml" />
-    <Page Include="Views\Ajout_Lieu.xaml" />
-    <Page Include="Views\Ajout_lot.xaml" />
-    <Page Include="Views\Ajout_ordre_achat.xaml" />
-    <Page Include="Views\Ajout_personne.xaml" />
-    <Page Include="Views\Ajout_Photo.xaml" />
-    <Page Include="Views\Ajout_produit.xaml" />
-    <Page Include="Views\Ajout_Vendeur.xaml" />
-    <Page Include="Views\Categorie.xaml" />
-    <Page Include="Views\Commissaire_Priseur.xaml" />
-    <Page Include="Views\Enchere.xaml" />
-    <Page Include="Views\Lieu.xaml" />
-    <Page Include="Views\Lot.xaml" />
+    <Page Include="Views\Pages\Achat.xaml" />
+    <Page Include="Views\Pages\Acheteur.xaml" />
+    <Page Include="Views\Ajouts\Ajout_Achat.xaml" />
+    <Page Include="Views\Ajouts\Ajout_acheteur.xaml" />
+    <Page Include="Views\Ajouts\Ajout_categorie.xaml" />
+    <Page Include="Views\Ajouts\Ajout_commissaire_priseur.xaml" />
+    <Page Include="Views\Ajouts\Ajout_enchere.xaml" />
+    <Page Include="Views\Ajouts\Ajout_Lieu.xaml" />
+    <Page Include="Views\Ajouts\Ajout_lot.xaml" />
+    <Page Include="Views\Ajouts\Ajout_ordre_achat.xaml" />
+    <Page Include="Views\Ajouts\Ajout_personne.xaml" />
+    <Page Include="Views\Ajouts\Ajout_Photo.xaml" />
+    <Page Include="Views\Ajouts\Ajout_produit.xaml" />
+    <Page Include="Views\Ajouts\Ajout_Vendeur.xaml" />
+    <Page Include="Views\Pages\Categorie.xaml" />
+    <Page Include="Views\Pages\Commissaire_Priseur.xaml" />
+    <Page Include="Views\Pages\Enchere.xaml" />
+    <Page Include="Views\Pages\Lieu.xaml" />
+    <Page Include="Views\Pages\Lot.xaml" />
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Ordre_Achat.xaml" />
-    <Page Include="Views\Personne.xaml" />
-    <Page Include="Views\Photo.xaml" />
-    <Page Include="Views\Produit.xaml" />
+    <Page Include="Views\Pages\Ordre_Achat.xaml" />
+    <Page Include="Views\Pages\Personne.xaml" />
+    <Page Include="Views\Pages\Photo.xaml" />
+    <Page Include="Views\Pages\Produit.xaml" />
     <Page Include="Views\SecondaryWindow.xaml" />
-    <Page Include="Views\Vendeur.xaml" />
+    <Page Include="Views\Pages\Vendeur.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\C#\Application modele B2\WpfApp11\ConnectMySQL.csproj">
