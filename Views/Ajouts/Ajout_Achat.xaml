@@ -27,13 +27,13 @@
                               SelectedValue="{Binding id_produit}"/>
                     
                     <Label Content="Prix"></Label>
-                    <TextBox Name="prix" Text="{Binding prix, Mode=TwoWay}"  Height="20"  />
+                    <TextBox Name="prix" PreviewTextInput="IntOnly" Text="{Binding prix, Mode=TwoWay}"  Height="20"  />
                     
                     <Label Content="Is Live ?"></Label>
-                    <TextBox Name="is_live" Text="{Binding is_live, Mode=TwoWay}"  Height="20"  />
+                    <TextBox Name="is_live" PreviewTextInput="BoolOnly" Text="{Binding is_live, Mode=TwoWay}"  Height="20"  />
                     
                     <Label Content="Is Telephone ?"></Label>
-                    <TextBox Name="is_telephone" Text="{Binding is_telephone, Mode=TwoWay}"  Height="20"  />
+                    <TextBox Name="is_telephone" PreviewTextInput="BoolOnly" Text="{Binding is_telephone, Mode=TwoWay}"  Height="20"  />
                 </StackPanel>
             </Grid>
             

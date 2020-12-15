@@ -19,7 +19,7 @@
                     <TextBox Name="email" Text="{Binding email, Mode=TwoWay}"  Height="20" />
                     
                     <Label Content="Age"></Label>
-                    <TextBox Name="age" Text="{Binding age, Mode=TwoWay}"  Height="20"  />
+                    <TextBox Name="age" PreviewTextInput="IntOnly" Text="{Binding age, Mode=TwoWay}"  Height="20"  />
                 </StackPanel>
             </Grid>
             

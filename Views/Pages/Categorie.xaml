@@ -23,6 +23,7 @@
                 </DataGrid.Columns>
             </DataGrid>
             <Button Content="Supprimer" MouseDoubleClick="supprimerCategorie" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>
+            <Button Click="btnCategorieProduit" Height="40" Width="100">Lier Produit-Categorie</Button>
             <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
         </StackPanel>
     </Grid>

@@ -1,7 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using BidCardCoin.Crtl;
 using BidCardCoin.DAL;
 using BidCardCoin.ORM;
@@ -69,6 +71,10 @@ namespace BidCardCoin.Views
         {
             // Lien avec les textbox
             ComboBoxProduit.DataContext = myDataObject;
+            ComboBoxAcheteur.DataContext = myDataObject;
+            prix.DataContext = myDataObject;
+            is_live.DataContext = myDataObject;
+            is_telephone.DataContext = myDataObject;
         }
 
         void gererEventSupplémentaires()
@@ -94,8 +100,23 @@ namespace BidCardCoin.Views
 
             // Comme le contexte des élément de la vue est encore l'ancien AchatViewModel,
             // On refait les liens entre age, slider, textbox, bouton et le nouveau AchatViewModel
-            ComboBoxProduit.DataContext = myDataObjectProduit;
-            ComboBoxAcheteur.DataContext = myDataObjectacheteur;
+            ComboBoxAcheteur.DataContext = myDataObject;
+            ComboBoxProduit.DataContext = myDataObject;
+            prix.DataContext = myDataObject;
+            is_live.DataContext = myDataObject;
+            is_telephone.DataContext = myDataObject;
+        }
+        
+        private void IntOnly(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+        
+        private void BoolOnly(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-1]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }
