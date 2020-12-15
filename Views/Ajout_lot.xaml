@@ -13,16 +13,20 @@
             <Grid Name ="grigrid" VerticalAlignment="Top">
                 <StackPanel>
                     <Label Content="Id Vente enchere"></Label>
-                    <TextBox Name="id_vente_enchere" Text="{Binding id_vente_enchere, Mode=TwoWay}"  Height="20" />
+                    <ComboBox Name="ComboBoxEnchere"
+                              DisplayMemberPath="id"
+                              SelectedValuePath="id"
+                              ItemsSource="{Binding}"
+                              SelectedValue="{Binding id_vente_enchere}"/>
                     
                     <Label Content="Description"></Label>
                     <TextBox Name="description" Text="{Binding description, Mode=TwoWay}"  Height="20"  />
                 </StackPanel>
             </Grid>
             
-            <Button Click="btnAjouter" Height="40" Width="50">Ajouter</Button>
+            <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
             
-            <Button Click="btnReturn" Height="40" Width="40">Retour</Button>
+            <Button Click="btnReturn" Height="40" Width="100">Retour</Button>
         </StackPanel>
        
     </Grid>

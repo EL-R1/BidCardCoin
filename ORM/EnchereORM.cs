@@ -28,7 +28,7 @@ namespace BidCardCoin.ORM
 
         public static void updateEnchere(EnchereViewModel p)
         {
-            EnchereDAO.updateEnchere(new EnchereDAO(p.id_vente_enchere, p.date_vente_enchere, p.id_lieu));
+            EnchereDAO.updateEnchere(new EnchereDAO(p.id, p.date_vente_enchere, p.id_lieu));
         }
 
         public static void supprimerEnchere(int id)
@@ -38,7 +38,7 @@ namespace BidCardCoin.ORM
 
         public static void insertEnchere(EnchereViewModel p)
         {
-            EnchereDAO.insertEnchere(new EnchereDAO(p.id_vente_enchere, p.date_vente_enchere, p.id_lieu));
+            EnchereDAO.insertEnchere(new EnchereDAO(p.id, p.date_vente_enchere, p.id_lieu));
         }
     }
 }

@@ -12,7 +12,7 @@ namespace BidCardCoin.Crtl
         
         private int _id_produit;
 
-        public int id_produit
+        public int id
         {
             get { return _id_produit; }
             set { _id_produit = value; }
@@ -95,7 +95,7 @@ namespace BidCardCoin.Crtl
             string date_vente_,
             float estimation_, byte is_vendu_, float prix_reserve_, string region_, string attribut_)
         {
-            this.id_produit = id_produit_;
+            this.id = id_produit_;
             this.id_lot = id_lot_;
             this.prix_depart = prix_depart_;
             this.description = description_;

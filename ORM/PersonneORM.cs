@@ -28,7 +28,7 @@ namespace BidCardCoin.ORM
 
         public static void updatePersonne(PersonneViewModel p)
         {
-            PersonneDAO.updatePersonne(new PersonneDAO(p.id_personne, p.nom, p.email, p.age));
+            PersonneDAO.updatePersonne(new PersonneDAO(p.id, p.nom, p.email, p.age));
         }
 
         public static void supprimerPersonne(int id)
@@ -38,7 +38,7 @@ namespace BidCardCoin.ORM
 
         public static void insertPersonne(PersonneViewModel p)
         {
-            PersonneDAO.insertPersonne(new PersonneDAO(p.id_personne, p.nom, p.email, p.age));
+            PersonneDAO.insertPersonne(new PersonneDAO(p.id, p.nom, p.email, p.age));
         }
     }
 }

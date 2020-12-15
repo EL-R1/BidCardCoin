@@ -18,7 +18,7 @@
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       SelectionChanged="listeCategories_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="id" Binding="{Binding id_produit, Mode=OneWay}" />
+                    <DataGridTextColumn Width="*" Header="id" Binding="{Binding id, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="id lot" Binding="{Binding id_lot}" />
                     <DataGridTextColumn Width="*" Header="prix de départ" Binding="{Binding prix_depart, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="description" Binding="{Binding description, Mode=TwoWay}" />
@@ -33,7 +33,7 @@
             </DataGrid>
             <Button Content="Supprimer" MouseDoubleClick="supprimerProduit" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>
 
-            <Button Click="btnAjouter" Height="40" Width="40">Ajouter</Button>
+            <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
 
         </StackPanel>
 

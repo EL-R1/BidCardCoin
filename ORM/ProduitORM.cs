@@ -28,7 +28,7 @@ namespace BidCardCoin.ORM
 
         public static void updateProduit(ProduitViewModel p)
         {
-            ProduitDAO.updateProduit(new ProduitDAO(p.id_produit, p.id_lot, p.prix_depart, p.description, p.date_vente, p.estimation, p.is_vendu, p.prix_reserve, p.region, p.attribut));
+            ProduitDAO.updateProduit(new ProduitDAO(p.id, p.id_lot, p.prix_depart, p.description, p.date_vente, p.estimation, p.is_vendu, p.prix_reserve, p.region, p.attribut));
         }
 
         public static void supprimerProduit(int id)
@@ -38,7 +38,7 @@ namespace BidCardCoin.ORM
 
         public static void insertProduit(ProduitViewModel p)
         {
-            ProduitDAO.insertProduit(new ProduitDAO(p.id_produit, p.id_lot, p.prix_depart, p.description, p.date_vente, p.estimation, p.is_vendu, p.prix_reserve, p.region, p.attribut));
+            ProduitDAO.insertProduit(new ProduitDAO(p.id, p.id_lot, p.prix_depart, p.description, p.date_vente, p.estimation, p.is_vendu, p.prix_reserve, p.region, p.attribut));
         }
     }
 }

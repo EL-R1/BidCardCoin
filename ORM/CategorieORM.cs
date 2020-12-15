@@ -28,7 +28,7 @@ namespace BidCardCoin.ORM
 
         public static void updateCategorie(CategorieViewModel p)
         {
-            CategorieDAO.updateCategorie(new CategorieDAO(p.id_categorie, p.nom));
+            CategorieDAO.updateCategorie(new CategorieDAO(p.id, p.nom));
         }
 
         public static void supprimerCategorie(int id)
@@ -38,7 +38,7 @@ namespace BidCardCoin.ORM
 
         public static void insertCategorie(CategorieViewModel p)
         {
-            CategorieDAO.insertCategorie(new CategorieDAO(p.id_categorie, p.nom));
+            CategorieDAO.insertCategorie(new CategorieDAO(p.id, p.nom));
         }
     }
 }

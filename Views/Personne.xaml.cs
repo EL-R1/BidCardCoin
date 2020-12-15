@@ -34,11 +34,18 @@ using System.Windows.Controls;
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
         }
+        private void btnPhoto(object sender, RoutedEventArgs e)
+        {
+            Photo ucObj = new Photo();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
+        
         private void listePersonnes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if ((listePersonnes.SelectedIndex < lp.Count) && (listePersonnes.SelectedIndex >= 0))
             {
-                selectedPersonneId = lp.ElementAt(listePersonnes.SelectedIndex).id_personne;
+                selectedPersonneId = lp.ElementAt(listePersonnes.SelectedIndex).id;
             }
         }
 

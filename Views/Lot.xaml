@@ -18,13 +18,13 @@
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       SelectionChanged="listeLots_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="*" Header="ID" Binding="{Binding id_lot, Mode=OneWay}" />
+                    <DataGridTextColumn Width="*" Header="ID" Binding="{Binding id, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="id_vente_enchere" Binding="{Binding id_vente_enchere, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="description" Binding="{Binding description, Mode=TwoWay}" />
                 </DataGrid.Columns>
             </DataGrid>
             <Button Content="Supprimer" MouseDoubleClick="supprimerLot" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>
-            <Button Click="btnAjouter" Height="40" Width="40">Ajouter</Button>
+            <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
         </StackPanel>
     </Grid>
 </UserControl>

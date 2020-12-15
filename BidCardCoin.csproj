@@ -105,34 +105,73 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Crtl\AchatViewModel.cs" />
+    <Compile Include="Crtl\AcheteurViewModel.cs" />
     <Compile Include="Crtl\CategorieViewModel.cs" />
+    <Compile Include="Crtl\Commissaire_PriseurViewModel.cs" />
     <Compile Include="Crtl\EnchereViewModel.cs" />
     <Compile Include="Crtl\LieuViewModel.cs" />
     <Compile Include="Crtl\LotViewModel.cs" />
+    <Compile Include="Crtl\OrdreAchatViewModel.cs" />
     <Compile Include="Crtl\PersonneViewModel.cs" />
+    <Compile Include="Crtl\PhotoViewModel.cs" />
     <Compile Include="Crtl\ProduitViewModel.cs" />
+    <Compile Include="Crtl\VendeurViewModel.cs" />
+    <Compile Include="DAL\AchatDAL.cs" />
+    <Compile Include="DAL\AcheteurDAL.cs" />
     <Compile Include="DAL\CategorieDAL.cs" />
+    <Compile Include="DAL\Commissaire_PriseurDAL.cs" />
     <Compile Include="DAL\DALConnection.cs" />
     <Compile Include="DAL\EnchereDAL.cs" />
     <Compile Include="DAL\LieuDAL.cs" />
     <Compile Include="DAL\LotDAL.cs" />
+    <Compile Include="DAL\OrdreAchatDAL.cs" />
     <Compile Include="DAL\PersonneDAL.cs" />
+    <Compile Include="DAL\PhotoDAL.cs" />
     <Compile Include="DAL\ProduitDAL.cs" />
+    <Compile Include="DAL\VendeurDAL.cs" />
+    <Compile Include="DAO\AchatDAO.cs" />
+    <Compile Include="DAO\AcheteurDAO.cs" />
     <Compile Include="DAO\CategorieDAO.cs" />
+    <Compile Include="DAO\Commissaire_PriseurDAO.cs" />
     <Compile Include="DAO\EnchereDAO.cs" />
     <Compile Include="DAO\LieuDAO.cs" />
     <Compile Include="DAO\LotDAO.cs" />
+    <Compile Include="DAO\OrdreAchatDAO.cs" />
     <Compile Include="DAO\PersonneDAO.cs" />
+    <Compile Include="DAO\PhotoDAO.cs" />
     <Compile Include="DAO\ProduitDAO.cs" />
+    <Compile Include="DAO\VendeurDAO.cs" />
+    <Compile Include="ORM\AchatORM.cs" />
+    <Compile Include="ORM\AcheteurORM.cs" />
     <Compile Include="ORM\CategorieORM.cs" />
+    <Compile Include="ORM\Commissaire_PriseurORM.cs" />
     <Compile Include="ORM\EnchereORM.cs" />
     <Compile Include="ORM\LieuORM.cs" />
     <Compile Include="ORM\LotORM.cs" />
+    <Compile Include="ORM\OrdreAchatORM.cs" />
     <Compile Include="ORM\PersonneORM.cs" />
+    <Compile Include="ORM\PhotoORM.cs" />
     <Compile Include="ORM\ProduitORM.cs" />
+    <Compile Include="ORM\VendeurORM.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Views\Achat.xaml.cs">
+      <DependentUpon>Achat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Acheteur.xaml.cs">
+      <DependentUpon>Acheteur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_Achat.xaml.cs">
+      <DependentUpon>Ajout_Achat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_acheteur.xaml.cs">
+      <DependentUpon>Ajout_acheteur.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ajout_categorie.xaml.cs">
       <DependentUpon>Ajout_categorie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_commissaire_priseur.xaml.cs">
+      <DependentUpon>Ajout_commissaire_priseur.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Ajout_enchere.xaml.cs">
       <DependentUpon>Ajout_enchere.xaml</DependentUpon>
@@ -143,14 +182,26 @@
     <Compile Include="Views\Ajout_lot.xaml.cs">
       <DependentUpon>Ajout_lot.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Ajout_ordre_achat.xaml.cs">
+      <DependentUpon>Ajout_ordre_achat.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Ajout_personne.xaml.cs">
       <DependentUpon>Ajout_personne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajout_Photo.xaml.cs">
+      <DependentUpon>Ajout_Photo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Ajout_produit.xaml.cs">
       <DependentUpon>Ajout_produit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Ajout_Vendeur.xaml.cs">
+      <DependentUpon>Ajout_Vendeur.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Categorie.xaml.cs">
       <DependentUpon>Categorie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Commissaire_Priseur.xaml.cs">
+      <DependentUpon>Commissaire_Priseur.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Enchere.xaml.cs">
       <DependentUpon>Enchere.xaml</DependentUpon>
@@ -165,14 +216,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\Ordre_Achat.xaml.cs">
+      <DependentUpon>Ordre_Achat.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Personne.xaml.cs">
       <DependentUpon>Personne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Photo.xaml.cs">
+      <DependentUpon>Photo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Produit.xaml.cs">
       <DependentUpon>Produit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SecondaryWindow.xaml.cs">
       <DependentUpon>SecondaryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Vendeur.xaml.cs">
+      <DependentUpon>Vendeur.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -201,13 +261,22 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\Achat.xaml" />
+    <Page Include="Views\Acheteur.xaml" />
+    <Page Include="Views\Ajout_Achat.xaml" />
+    <Page Include="Views\Ajout_acheteur.xaml" />
     <Page Include="Views\Ajout_categorie.xaml" />
+    <Page Include="Views\Ajout_commissaire_priseur.xaml" />
     <Page Include="Views\Ajout_enchere.xaml" />
     <Page Include="Views\Ajout_Lieu.xaml" />
     <Page Include="Views\Ajout_lot.xaml" />
+    <Page Include="Views\Ajout_ordre_achat.xaml" />
     <Page Include="Views\Ajout_personne.xaml" />
+    <Page Include="Views\Ajout_Photo.xaml" />
     <Page Include="Views\Ajout_produit.xaml" />
+    <Page Include="Views\Ajout_Vendeur.xaml" />
     <Page Include="Views\Categorie.xaml" />
+    <Page Include="Views\Commissaire_Priseur.xaml" />
     <Page Include="Views\Enchere.xaml" />
     <Page Include="Views\Lieu.xaml" />
     <Page Include="Views\Lot.xaml" />
@@ -215,9 +284,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\Ordre_Achat.xaml" />
     <Page Include="Views\Personne.xaml" />
+    <Page Include="Views\Photo.xaml" />
     <Page Include="Views\Produit.xaml" />
     <Page Include="Views\SecondaryWindow.xaml" />
+    <Page Include="Views\Vendeur.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\C#\Application modele B2\WpfApp11\ConnectMySQL.csproj">

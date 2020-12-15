@@ -26,6 +26,19 @@ namespace BidCardCoin.Views
             appliquerContexte();
 
             gererEventSupplémentaires();
+
+            loadLots();
+        }
+        
+        LotViewModel myDataObjectLot; // Objet de liaison avec la vue lors de l'ajout d'une Lot par exemple.
+        ObservableCollection<LotViewModel> lot;
+
+        void loadLots()
+        {
+            lot = LotORM.listeLots();
+            myDataObjectLot = new LotViewModel();
+            //LIEN AVEC la VIEW
+            ComboBoxLot.ItemsSource = lot; // bind de la liste avec la source, permettant le binding.
         }
         private void btnReturn(object sender, RoutedEventArgs e)
         {
@@ -47,7 +60,7 @@ namespace BidCardCoin.Views
         
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
-            myDataObject.id_produit = ProduitDAL.getMaxIdProduit() + 1;
+            myDataObject.id = ProduitDAL.getMaxIdProduit() + 1;
 
             lp.Add(myDataObject);
             ProduitORM.insertProduit(myDataObject);
@@ -60,7 +73,7 @@ namespace BidCardCoin.Views
 
             // Comme le contexte des élément de la vue est encore l'ancien PersonneViewModel,
             // On refait les liens entre age, slider, textbox, bouton et le nouveau PersonneViewModel
-            id_lot.DataContext = myDataObject;
+            ComboBoxLot.DataContext = myDataObject;
             prix_de_depart.DataContext = myDataObject;
             Description.DataContext = myDataObject;
             Date_Vente.DataContext = myDataObject;
@@ -92,7 +105,7 @@ namespace BidCardCoin.Views
             txtAgeDeux.DataContext = myDataObject;
             mySlider.DataContext = myDataObject;*/
             
-            id_lot.DataContext = myDataObject;
+            ComboBoxLot.DataContext = myDataObject;
             prix_de_depart.DataContext = myDataObject;
             Description.DataContext = myDataObject;
             Date_Vente.DataContext = myDataObject;

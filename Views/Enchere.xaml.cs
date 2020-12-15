@@ -51,7 +51,7 @@ namespace BidCardCoin.Vue
         {
             if ((listeEncheres.SelectedIndex < lp.Count) && (listeEncheres.SelectedIndex >= 0))
             {
-                selectedEnchereId = lp.ElementAt(listeEncheres.SelectedIndex).id_vente_enchere;
+                selectedEnchereId = lp.ElementAt(listeEncheres.SelectedIndex).id;
             }
         }
 
@@ -65,5 +65,6 @@ namespace BidCardCoin.Vue
                 EnchereORM.supprimerEnchere(selectedEnchereId);
             }
         }
+        
     }
 }
