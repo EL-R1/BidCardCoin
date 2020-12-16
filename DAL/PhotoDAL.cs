@@ -87,7 +87,7 @@ namespace BidCardCoin.DAL
 
         public static PhotoDAO getPhoto(int idPhoto)
         {
-            string query = "SELECT * FROM photo WHERE id_photo=" + idPhoto + ";";
+            string query = "SELECT * FROM photo WHERE id_photo=" + idPhoto + "\";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();

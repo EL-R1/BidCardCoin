@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 16 déc. 2020 à 19:17
+-- Généré le : mer. 16 déc. 2020 à 20:57
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `mydb`
+-- Base de données : `bcc`
 --
 
 -- --------------------------------------------------------
@@ -34,6 +34,14 @@ CREATE TABLE `achat` (
   `is_live` tinyint(4) DEFAULT NULL,
   `is_telephone` tinyint(4) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `achat`
+--
+
+INSERT INTO `achat` (`id_acheteur`, `id_produit`, `prix`, `is_live`, `is_telephone`) VALUES
+(5, 1, 5, 1, 1),
+(2, 2, 5, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -55,7 +63,8 @@ INSERT INTO `acheteur` (`id_acheteur`, `id_personne`, `is_solvable`) VALUES
 (1, 3, 1),
 (2, 5, 0),
 (3, 1, 0),
-(4, 1, 0);
+(4, 1, 0),
+(5, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -87,6 +96,16 @@ CREATE TABLE `categorie_produit` (
   `id_categorie` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `categorie_produit`
+--
+
+INSERT INTO `categorie_produit` (`id_produit`, `id_categorie`) VALUES
+(2, 1),
+(2, 1),
+(2, 1),
+(2, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -96,9 +115,15 @@ CREATE TABLE `categorie_produit` (
 CREATE TABLE `comissaire_priseur` (
   `id_comissaire_priseur` int(11) NOT NULL,
   `id_produit` int(11) NOT NULL,
-  `id_personne` int(11) NOT NULL,
-  `comissaire_priseurcol` int(11) DEFAULT NULL
+  `id_personne` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `comissaire_priseur`
+--
+
+INSERT INTO `comissaire_priseur` (`id_comissaire_priseur`, `id_produit`, `id_personne`) VALUES
+(1, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -131,7 +156,8 @@ CREATE TABLE `lieu` (
 
 INSERT INTO `lieu` (`id_lieu`, `nom`, `adresse`, `ville`, `code_postal`) VALUES
 (1, 'Nantes', 'Nantes', 'Nantes', 44000),
-(2, 'COUCOU', 'dddd', 'SALUT', 95000);
+(2, 'COUCOU', 'dddd', 'SALUT', 95000),
+(3, 'qYO', 'coucou', 'salut', 14582);
 
 -- --------------------------------------------------------
 
@@ -150,7 +176,8 @@ CREATE TABLE `lot` (
 --
 
 INSERT INTO `lot` (`id_lot`, `id_vente_enchere`, `description`) VALUES
-(1, 2, 'Description');
+(1, 2, 'Description'),
+(2, 3, 'ddddd');
 
 -- --------------------------------------------------------
 
@@ -165,6 +192,13 @@ CREATE TABLE `ordre_achat` (
   `montant` float DEFAULT NULL,
   `date_achat` varchar(50) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `ordre_achat`
+--
+
+INSERT INTO `ordre_achat` (`id_ordre_achat`, `id_produit`, `id_acheteur`, `montant`, `date_achat`) VALUES
+(1, 2, 3, 155, '24/12/2020');
 
 -- --------------------------------------------------------
 
@@ -188,7 +222,8 @@ CREATE TABLE `personne` (
 INSERT INTO `personne` (`id_personne`, `username`, `password`, `nom`, `email`, `age`) VALUES
 (1, 'red', '1234', 'Antoine', 'antoine@gmail.com', 15),
 (3, 'blue', '4321', 'Blue', 'blue@gmail.com', 4),
-(5, 'redou2', 'qsdqsdsqd', 'Red', 'test', 159);
+(5, 'redou2', 'qsdqsdsqd', 'Red', 'test', 159),
+(6, 'boss', 'boss', 'Boss', 'boss@gmail.com', 99);
 
 -- --------------------------------------------------------
 
@@ -200,6 +235,13 @@ CREATE TABLE `photo` (
   `id_photo` int(11) NOT NULL,
   `id_produit` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `photo`
+--
+
+INSERT INTO `photo` (`id_photo`, `id_produit`) VALUES
+(1, 1);
 
 -- --------------------------------------------------------
 
@@ -225,7 +267,8 @@ CREATE TABLE `produit` (
 --
 
 INSERT INTO `produit` (`id_produit`, `id_lot`, `prix_depart`, `description`, `date_vente`, `estimation`, `is_vendu`, `prix_reserve`, `region`, `attribut`) VALUES
-(1, 1, 50, 'COUCOU', '19/12/2020', 122, 0, 42, 'FFF', 'what ?');
+(1, 1, 50, 'COUCOU', '19/12/2020', 122, 0, 42, 'FFF', 'what ?'),
+(2, 2, 145, 'sqdqsd', '19/12/2020', 1452, 1, 145, 'Nantes', '');
 
 -- --------------------------------------------------------
 
@@ -238,6 +281,14 @@ CREATE TABLE `vendeur` (
   `id_personne` int(11) NOT NULL,
   `id_produit` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `vendeur`
+--
+
+INSERT INTO `vendeur` (`id_vendeur`, `id_personne`, `id_produit`) VALUES
+(1, 6, 1),
+(2, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -257,7 +308,8 @@ CREATE TABLE `vente_enchere` (
 
 INSERT INTO `vente_enchere` (`id_vente_enchere`, `date_vente_enchere`, `id_lieu`) VALUES
 (1, '', 1),
-(2, '18/12/2020', 1);
+(2, '18/12/2020', 1),
+(3, '17/12/2020', 2);
 
 --
 -- Index pour les tables déchargées
@@ -340,13 +392,13 @@ ALTER TABLE `vente_enchere`
 -- AUTO_INCREMENT pour la table `comissaire_priseur`
 --
 ALTER TABLE `comissaire_priseur`
-  MODIFY `id_comissaire_priseur` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_comissaire_priseur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `ordre_achat`
 --
 ALTER TABLE `ordre_achat`
-  MODIFY `id_ordre_achat` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ordre_achat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `personne`
@@ -358,13 +410,13 @@ ALTER TABLE `personne`
 -- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `id_produit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_produit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `vendeur`
 --
 ALTER TABLE `vendeur`
-  MODIFY `id_vendeur` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_vendeur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Contraintes pour les tables déchargées

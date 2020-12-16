@@ -19,7 +19,6 @@ using System.Windows.Input;
         
         VendeurViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Vendeur par exemple.
         ObservableCollection<VendeurViewModel> lp;
-        int compteur = 0;
         int selectedVendeursId;
         
         void loadVendeurs()

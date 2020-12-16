@@ -20,7 +20,6 @@ using System.Windows.Input;
         
         AchatViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Achat par exemple.
         ObservableCollection<AchatViewModel> lp;
-        int compteur = 0;
         int selectedAchatsId;
         int selectedProduitsId;
         

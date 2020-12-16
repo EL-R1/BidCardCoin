@@ -86,7 +86,7 @@ namespace BidCardCoin.DAL
 
         public static ProduitDAO getProduit(int idProduit)
         {
-            string query = "SELECT * FROM Produit WHERE id_produit=" + idProduit + ";";
+            string query = "SELECT * FROM Produit WHERE id_produit=" + idProduit + "\";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();

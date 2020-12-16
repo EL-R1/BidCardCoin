@@ -86,7 +86,7 @@ namespace BidCardCoin.DAL
 
         public static Ordre_AchatDAO getOrdre_Achat(int idOrdre_Achat)
         {
-            string query = "SELECT * FROM ordre_achat WHERE id_ordre_achat=" + idOrdre_Achat + ";";
+            string query = "SELECT * FROM ordre_achat WHERE id_ordre_achat=" + idOrdre_Achat + "\";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();

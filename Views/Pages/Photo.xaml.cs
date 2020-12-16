@@ -19,7 +19,6 @@ using System.Windows.Input;
         
         PhotoViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Photo par exemple.
         ObservableCollection<PhotoViewModel> lp;
-        int compteur = 0;
         int selectedPhotosId;
         
         void loadPhotos()
