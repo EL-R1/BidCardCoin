@@ -38,7 +38,7 @@ namespace BidCardCoin.DAL
 
         public static void updateCommissaire_Priseur(Commissaire_PriseurDAO p)
         {
-            string query = "UPDATE comissaire_priseur set id_produit=\"" + p.id_produit + "\", id_personne=\"" + p.id_personne + "\" where id_comissaire_priseur=" + p.id_comissaire_priseur + ";";
+            string query = "UPDATE comissaire_priseur set id_produit=" + p.id_produit + ", id_personne=" + p.id_personne + " where id_comissaire_priseur=" + p.id_comissaire_priseur + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -46,7 +46,7 @@ namespace BidCardCoin.DAL
         public static void insertCommissaire_Priseur(Commissaire_PriseurDAO p)
         {
             int id = getMaxIdCommissaire_Priseur() + 1;
-            string query = "INSERT INTO comissaire_priseur VALUES (\"" + id + "\",\"" +  p.id_produit + "\",\"" + p.id_personne + "\");";
+            string query = "INSERT INTO comissaire_priseur VALUES ('" + id + "','" +  p.id_produit + "','" + p.id_personne + "');";
             MySqlCommand cmd2 = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd2);
             cmd2.ExecuteNonQuery();

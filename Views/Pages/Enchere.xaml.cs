@@ -21,7 +21,6 @@ namespace BidCardCoin.Vue
         
         EnchereViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Enchere par exemple.
         ObservableCollection<EnchereViewModel> lp;
-        int compteur = 0;
         int selectedEnchereId;
         
         void loadEncheres()

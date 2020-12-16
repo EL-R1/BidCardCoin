@@ -17,7 +17,6 @@ namespace BidCardCoin.Views
         }
         ProduitViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Produit par exemple.
         ObservableCollection<ProduitViewModel> lp;
-        int compteur = 0;
         int selectedProduitId;
         private void btnAjouter(object sender, RoutedEventArgs e)
         {

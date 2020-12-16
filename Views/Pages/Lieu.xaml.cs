@@ -18,7 +18,6 @@ namespace BidCardCoin.Views
         
         LieuViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Lieu par exemple.
         ObservableCollection<LieuViewModel> lp;
-        int compteur = 0;
         int selectedLieuId;
 
         void loadLieux()

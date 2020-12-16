@@ -18,7 +18,6 @@ using System.Windows.Controls;
         
         PersonneViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Personne par exemple.
         ObservableCollection<PersonneViewModel> lp;
-        int compteur = 0;
         int selectedPersonneId;
         
         void loadPersonnes()
