@@ -53,7 +53,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerVendeur(int id)
         {
-            string query = "DELETE FROM vendeur WHERE id_vendeur = \"" + id + "\";";
+            string query = "DELETE FROM vendeur WHERE id_vendeur = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();

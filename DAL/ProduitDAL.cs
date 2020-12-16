@@ -53,7 +53,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerProduit(int id)
         {
-            string query = "DELETE FROM Produit WHERE id_produit = \"" + id + "\";";
+            string query = "DELETE FROM Produit WHERE id_produit = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();

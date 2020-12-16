@@ -11,11 +11,11 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <StackPanel Name="stkTest" Grid.RowSpan="2" >
-            <Label Content="ajout Personne" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
+        <StackPanel Name="stkTest" Grid.RowSpan="2" Margin="0,0,0,-78" >
+            <Label Content="Ajouter une personne" StackPanel.ZIndex="0" Margin="0 50 0 0" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Berlin Sans FB" FontSize="20"></Label>
 
             <Grid Name ="grigrid" VerticalAlignment="Top">
-                <StackPanel>
+                <StackPanel Margin="30,0">
                     <Label Content="Nom"></Label>
                     <TextBox Name="nom" Text="{Binding nom, Mode=TwoWay}"  Height="20" />
 
@@ -33,9 +33,11 @@
                 </StackPanel>
             </Grid>
 
-            <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
+            <StackPanel Orientation="Horizontal" Height="41" Margin="0,20,-0.2,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Click="btnAjouter" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,10,0" Height="25" Width="69">Ajouter</Button>
 
-            <Button Click="btnReturn" Height="40" Width="100">Retour</Button>
+                <Button Click="btnReturn" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="70" Margin="10,0,0,0">Retour</Button>
+            </StackPanel>
         </StackPanel>
 
     </Grid>

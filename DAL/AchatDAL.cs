@@ -52,7 +52,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerAchat(int id_acheteur, int id_produit)
         {
-            string query = "DELETE FROM achat WHERE id_acheteur = \"" + id_acheteur + "\" and id_produit=" + id_produit + "\";";
+            string query = "DELETE FROM achat WHERE id_acheteur = \"" + id_acheteur + "\" and id_produit=" + id_produit + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -87,7 +87,7 @@ namespace BidCardCoin.DAL
         
         public static AchatDAO getAchat(int id_acheteur, int id_produit)
         {
-            string query = "SELECT * FROM achat WHERE id_acheteur = \"" + id_acheteur + "\" and id_produit=" + id_produit + "\";";
+            string query = "SELECT * FROM achat WHERE id_acheteur = \"" + id_acheteur + "\" and id_produit=" + id_produit + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();

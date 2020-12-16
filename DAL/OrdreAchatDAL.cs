@@ -53,7 +53,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerOrdre_Achat(int id)
         {
-            string query = "DELETE FROM ordre_achat WHERE id_ordre_achat = \"" + id + "\";";
+            string query = "DELETE FROM ordre_achat WHERE id_ordre_achat = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();

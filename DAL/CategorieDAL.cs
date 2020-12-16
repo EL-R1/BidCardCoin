@@ -39,7 +39,7 @@ namespace BidCardCoin.DAL
 
         public static void updateCategorie(CategorieDAO p)
         {
-            string query = "UPDATE categorie set nom=\"" + p.nom + "\" where id_categorie=" + p.id_categorie + "\";";
+            string query = "UPDATE categorie set nom=\"" + p.nom + "\" where id_categorie=" + p.id_categorie + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -54,7 +54,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerCategorie(int id)
         {
-            string query = "DELETE FROM Categorie WHERE id_Categorie = \"" + id + "\";";
+            string query = "DELETE FROM Categorie WHERE id_Categorie =" + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();

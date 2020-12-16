@@ -7,8 +7,8 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <StackPanel Name="stkTest" >
-            <Label Content="Ajouter une Acheteur" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
+        <StackPanel Name="stkTest" Margin="33,0" >
+            <Label Content="Ajouter un acheteur" StackPanel.ZIndex="0" Margin="0 50 0 0" FontFamily="Berlin Sans FB" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
             
             <Grid Name ="grigrid" VerticalAlignment="Top">
                 <StackPanel>
@@ -22,10 +22,12 @@
                     <TextBox Name="is_solvable" PreviewTextInput="BoolOnly" Text="{Binding is_solvable, Mode=TwoWay}"  Height="20"  />
                 </StackPanel>
             </Grid>
-            
-            <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
-            
-            <Button Click="btnReturn" Height="40" Width="100">Retour</Button>
+
+            <StackPanel Orientation="Horizontal" Height="41" Margin="0,20,-0.2,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Click="btnAjouter" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="0,0,10,0" Height="25" Width="69">Ajouter</Button>
+
+                <Button Click="btnReturn" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="70" Margin="10,0,0,0">Retour</Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </UserControl>

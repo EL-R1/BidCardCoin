@@ -53,7 +53,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerCategorieProduit(int id_categorie, int id_produit)
         {
-            string query = "DELETE FROM categorie_produit WHERE id_categorie = \"" + id_categorie + "\" and id_produit=" + id_produit + "\";";
+            string query = "DELETE FROM categorie_produit WHERE id_categorie = " + id_categorie + " and id_produit=" + id_produit + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -61,7 +61,7 @@ namespace BidCardCoin.DAL
 
         public static CategorieProduitDAO getCategorieProduit(int id_categorie, int id_produit)
         {
-            string query = "SELECT * FROM categorie_produit WHERE id_categorie = \"" + id_categorie + "\" and id_produit=" + id_produit + "\";";
+            string query = "SELECT * FROM categorie_produit WHERE id_categorie = \"" + id_categorie + "\" and id_produit=" + id_produit + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();
