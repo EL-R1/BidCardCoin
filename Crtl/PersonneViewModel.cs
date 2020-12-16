@@ -38,6 +38,7 @@ namespace BidCardCoin.Crtl
         }
 
 
+
         public PersonneViewModel(int id_personne_,string nom_,string email_,int age_)
         {
             this.id = id_personne_;

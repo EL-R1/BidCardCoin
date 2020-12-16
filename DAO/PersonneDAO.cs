@@ -39,6 +39,11 @@ namespace BidCardCoin.DAO
             PersonneDAL.supprimerPersonne(id);
         }
 
+        public static int getLoginCount(string username, string password)
+        {
+            return PersonneDAL.getLoginCount(username, password);
+        }
+
         public static void insertPersonne(PersonneDAO p)
         {
             PersonneDAL.insertPersonne(p);

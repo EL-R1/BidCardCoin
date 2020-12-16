@@ -36,7 +36,7 @@
                 <Image Source="/images/home.png" Height="37" Width="44" VerticalAlignment="Top" HorizontalAlignment="Left"/>
             </Button>
         </StackPanel>
-        <StackPanel Name="stkTest" Margin="0,0,-0.4,-0.4" Grid.RowSpan="3" >
+        <StackPanel Name="stkTest" Margin="0,0,-0.4,-0.2" Grid.RowSpan="3" >
             <Label Content="Secondary Window" Panel.ZIndex="0" Margin="0,50,-0.4,0" />
             <TextBlock Margin="0,0,-0.4,0" HorizontalAlignment="Left" Width="762"><Run Text="Bienvenu sur le site de BidCardCoin en espérant que vous apprécierez notre site"/></TextBlock>
         </StackPanel>

@@ -36,6 +36,11 @@ namespace BidCardCoin.ORM
             PersonneDAO.supprimerPersonne(id);
         }
 
+        public static int getLoginCount(string username, string password)
+        {
+            return PersonneDAO.getLoginCount(username, password);
+        }
+
         public static void insertPersonne(PersonneViewModel p)
         {
             PersonneDAO.insertPersonne(new PersonneDAO(p.id, p.nom, p.email, p.age));

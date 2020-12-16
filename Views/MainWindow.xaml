@@ -9,13 +9,18 @@
     <!-- WindowState="Maximized" WindowStyle="None"-->
     <Grid>
         <Button Content="❌" VerticalAlignment="Top" HorizontalAlignment="Right" Click="btnExit" StackPanel.ZIndex="1"></Button>
-        
+
         <StackPanel Name="tbPanel">
             <Label Content="Login" StackPanel.ZIndex="0" ></Label>
-            <Button Content="Login" Height="75" Width="75" Click="BtnNext"></Button>
-            <Button Content="Add Metric" Width="100" HorizontalAlignment="Center" Height="30" Grid.Row="1" Grid.Column="0" Click="button1_Click"/>
-            
-            
+            <Grid Width="542">
+                <Label Content="email" Margin="69,12,433,67.8"/>
+                <TextBox Height="23" Name="TextboxUsername" TextWrapping="Wrap" Margin="69,38,323,44.6" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <PasswordBox x:Name="PasswordBox" Width="150" Margin="333,38,59,44.6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Label Content="password" Margin="333,14,142,61.6"/>
+            </Grid>
+            <Button Content="Login" Command="{Binding Path=BtnLogin_Click}" CommandParameter="{Binding ElementName=PasswordBox}" Height="20" Click="BtnLogin_Click" Margin="267,0,292.6,0" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Width="202" VerticalAlignment="Center"/>
+
+
             <!--<Button Name="button" Content="Hello" Height="75" Width="75" Click="btnExit">
                 <Button.ContentTemplate>
                     <DataTemplate>
@@ -25,7 +30,7 @@
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>-->
-            
+
         </StackPanel>
     </Grid>
 </Window>
