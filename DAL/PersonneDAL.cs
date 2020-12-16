@@ -36,6 +36,7 @@ namespace BidCardCoin.DAL
             return l;
         }
 
+
         public static void updatePersonne(PersonneDAO p)
         {
             string query = "UPDATE personne set nom=\"" + p.nom + "\", email=\"" + p.email + "\", age=\"" + p.age + "\" where id_personne=" + p.id_personne + ";";
@@ -46,7 +47,7 @@ namespace BidCardCoin.DAL
         public static void insertPersonne(PersonneDAO p)
         {
             int id = getMaxIdPersonne() + 1;
-            string query = "INSERT INTO personne VALUES (\"" + id + "\",\"" +  p.nom + "\",\"" +  p.email + "\",\"" + p.age + "\");";
+            string query = "INSERT INTO personne VALUES (\"" + id + "\",\"" + "red" + "\",\"" + "1234" + "\",\"" + p.nom + "\",\"" +  p.email + "\",\"" + p.age + "\");";
             MySqlCommand cmd2 = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd2);
             cmd2.ExecuteNonQuery();
@@ -83,6 +84,31 @@ namespace BidCardCoin.DAL
             reader.Close();
             return maxIdPersonne;
         }
+        public static int getLoginCount(string username, string password)
+        {
+            int countLogin = 0;
+            string query = "SELECT * FROM Personne WHERE username='" + username + "' AND password='" + password + "'";
+            MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
+
+            int cnt = cmd.ExecuteNonQuery();
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                reader.Read();
+                if (!reader.IsDBNull(0))
+                {
+                    countLogin = reader.GetInt32(0);
+                }
+                else
+                {
+                    countLogin = 0;
+                }
+            }
+            reader.Close();
+
+            return countLogin;
+        }
 
         public static PersonneDAO getPersonne(int idPersonne)
         {
@@ -95,5 +121,7 @@ namespace BidCardCoin.DAL
             reader.Close();
             return pers;
         }
+
+
     }
 }
