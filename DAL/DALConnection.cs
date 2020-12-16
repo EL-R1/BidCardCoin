@@ -16,7 +16,7 @@ namespace BidCardCoin.DAL
             if (connection == null) //  si la connexion est déjà ouverte, il ne la refera pas 
             {
                 server = "localhost";
-                database = "mydb";
+                database = "bcc";
                 uid = "root";
                 password = "";
                 string connectionString;
