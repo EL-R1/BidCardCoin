@@ -26,7 +26,7 @@ namespace BidCardCoin.DAO
         public static PersonneDAO getPersonne(int idPersonne)
         {
             PersonneDAO p = PersonneDAL.getPersonne(idPersonne);
-            return p;
+            return p; //braux proof
         }
 
         public static void updatePersonne(PersonneDAO p)

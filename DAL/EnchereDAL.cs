@@ -46,7 +46,7 @@ namespace BidCardCoin.DAL
         public static void insertEnchere(EnchereDAO p)
         {
             int id = getMaxIdEnchere() + 1;
-            string query = "INSERT INTO vente_enchere VALUES (\"" + id + "\",\"" +  p.date_vente_enchere + "\",\"" + p.id_lieu + "\");";
+            string query = "INSERT INTO vente_enchere VALUES ('" + id + "','" + p.date_vente_enchere + "','" + p.id_lieu + "');";
             MySqlCommand cmd2 = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd2);
             cmd2.ExecuteNonQuery();
