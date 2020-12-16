@@ -24,7 +24,7 @@ namespace BidCardCoin.DAL
 
                 while (reader.Read())
                 {
-                    PersonneDAO p = new PersonneDAO(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
+                    PersonneDAO p = new PersonneDAO(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5));
                     l.Add(p);
                 }
             }
@@ -39,7 +39,7 @@ namespace BidCardCoin.DAL
 
         public static void updatePersonne(PersonneDAO p)
         {
-            string query = "UPDATE personne set nom=\"" + p.nom + "\", email=\"" + p.email + "\", age=\"" + p.age + "\" where id_personne=" + p.id_personne + ";";
+            string query = "UPDATE personne set username=\"" + p.username + "\", password=\"" + p.password +"\", nom=\"" + p.nom + "\", email=\"" + p.email + "\", age=\"" + p.age + "\" where id_personne=" + p.id_personne + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -47,7 +47,7 @@ namespace BidCardCoin.DAL
         public static void insertPersonne(PersonneDAO p)
         {
             int id = getMaxIdPersonne() + 1;
-            string query = "INSERT INTO personne VALUES (\"" + id + "\",\"" + "red" + "\",\"" + "1234" + "\",\"" + p.nom + "\",\"" +  p.email + "\",\"" + p.age + "\");";
+            string query = "INSERT INTO personne VALUES (\"" + id + "\",\"" + p.username + "\",\"" + p.password + "\",\"" + p.nom + "\",\"" +  p.email + "\",\"" + p.age + "\");";
             MySqlCommand cmd2 = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd2);
             cmd2.ExecuteNonQuery();
@@ -96,13 +96,13 @@ namespace BidCardCoin.DAL
             if (reader.HasRows)
             {
                 reader.Read();
-                if (!reader.IsDBNull(0))
+                if (reader.GetInt32(0) == 0)
                 {
-                    countLogin = reader.GetInt32(0);
+                    countLogin = 0;
                 }
                 else
                 {
-                    countLogin = 0;
+                    countLogin = 1;
                 }
             }
             reader.Close();
@@ -117,7 +117,7 @@ namespace BidCardCoin.DAL
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();
             reader.Read();
-            PersonneDAO pers = new PersonneDAO(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
+            PersonneDAO pers = new PersonneDAO(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5));
             reader.Close();
             return pers;
         }

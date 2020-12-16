@@ -9,13 +9,17 @@ namespace BidCardCoin.DAO
         public string nom;
         public string email;
         public int age;
+        public string username;
+        public string password;
 
-        public PersonneDAO(int id_personne_,string nom_,string email_,int age_)
+        public PersonneDAO(int id_personne_, string username_, string password_, string nom_,string email_,int age_)
         {
-            this.id_personne = id_personne_;
-            this.nom = nom_;
-            this.email = email_;
-            this.age = age_;
+            id_personne = id_personne_;
+            username = username_;
+            password = password_;
+            nom = nom_;
+            email = email_;
+            age = age_;
         }
         public static ObservableCollection<PersonneDAO>  listePersonnes()
         {
@@ -41,7 +45,8 @@ namespace BidCardCoin.DAO
 
         public static int getLoginCount(string username, string password)
         {
-            return PersonneDAL.getLoginCount(username, password);
+            int d = PersonneDAL.getLoginCount(username, password);
+            return d;
         }
 
         public static void insertPersonne(PersonneDAO p)

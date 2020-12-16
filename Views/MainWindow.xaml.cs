@@ -31,13 +31,9 @@ namespace BidCardCoin
                 Close();
                 secondaryWindow.Show();
             }
-            else if (count == 0)
-            {
-                MessageBox.Show("L'identifiant ou le mot de passe sont incorrects.");
-            }
             else
             {
-                MessageBox.Show("Wtf step braux ??");
+                MessageBox.Show("L'identifiant ou le mot de passe sont incorrects.");
             }
 
         }
