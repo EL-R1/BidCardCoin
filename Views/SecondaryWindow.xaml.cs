@@ -80,7 +80,7 @@ namespace BidCardCoin.Vue
         
         private void btnExit(object sender, RoutedEventArgs routedEventArgs)
         {
-            this.Close();
+            Close();
         }
     }
 }

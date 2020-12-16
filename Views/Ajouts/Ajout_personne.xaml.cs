@@ -7,6 +7,7 @@ using BidCardCoin.ORM;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Input;
+using System.Security;
 
 namespace BidCardCoin.Views
 {
@@ -44,6 +45,8 @@ namespace BidCardCoin.Views
             nom.DataContext = myDataObject;
             email.DataContext = myDataObject;
             age.DataContext = myDataObject;
+            username.DataContext = myDataObject;
+            password.DataContext = myDataObject;
         }
 
         void gererEventSupplémentaires()
@@ -56,6 +59,7 @@ namespace BidCardCoin.Views
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
         }
+
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
             myDataObject.id = PersonneDAL.getMaxIdPersonne() + 1;
@@ -73,6 +77,8 @@ namespace BidCardCoin.Views
             nom.DataContext = myDataObject;
             email.DataContext = myDataObject;
             age.DataContext = myDataObject;
+            password.DataContext = myDataObject;
+            username.DataContext = myDataObject;
         }
         
         private void NumericOnly(System.Object sender, System.Windows.Input.TextCompositionEventArgs e)

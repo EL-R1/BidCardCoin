@@ -53,7 +53,7 @@ namespace BidCardCoin.Views
         }
         private void BoolOnly(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]+");
+            Regex regex = new Regex("[^0-1]+");
             e.Handled = regex.IsMatch(e.Text);
         }
         

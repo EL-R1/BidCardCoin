@@ -9,7 +9,7 @@ namespace BidCardCoin.ORM
         public static PersonneViewModel getPersonne(int idPersonne)
         {
             PersonneDAO pDAO=PersonneDAO.getPersonne(idPersonne);
-            PersonneViewModel p = new PersonneViewModel(pDAO.id_personne, pDAO.nom, pDAO.email, pDAO.age);
+            PersonneViewModel p = new PersonneViewModel(pDAO.id_personne, pDAO.nom, pDAO.email, pDAO.age, pDAO.username, pDAO.password);
             return p;
         }
 
@@ -19,7 +19,7 @@ namespace BidCardCoin.ORM
             ObservableCollection<PersonneViewModel> l = new ObservableCollection<PersonneViewModel>();
             foreach (PersonneDAO element in lDAO)
             {
-                PersonneViewModel p = new PersonneViewModel(element.id_personne, element.nom, element.email, element.age);
+                PersonneViewModel p = new PersonneViewModel(element.id_personne, element.nom, element.email, element.age, element.username, element.password);
                 l.Add(p);
             }
             return l;
@@ -28,7 +28,7 @@ namespace BidCardCoin.ORM
 
         public static void updatePersonne(PersonneViewModel p)
         {
-            PersonneDAO.updatePersonne(new PersonneDAO(p.id, p.nom, p.email, p.age));
+            PersonneDAO.updatePersonne(new PersonneDAO(p.id, p.username, p.password, p.nom, p.email, p.age));
         }
 
         public static void supprimerPersonne(int id)
@@ -43,7 +43,7 @@ namespace BidCardCoin.ORM
 
         public static void insertPersonne(PersonneViewModel p)
         {
-            PersonneDAO.insertPersonne(new PersonneDAO(p.id, p.nom, p.email, p.age));
+            PersonneDAO.insertPersonne(new PersonneDAO(p.id, p.username, p.password, p.nom, p.email, p.age));
         }
     }
 }
