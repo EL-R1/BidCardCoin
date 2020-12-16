@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="BidCardCoin.Views.Ajout_Ordre_Achat"
+﻿<UserControl x:Class="BidCardCoin.Views.Ajout_CategorieProduit"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,37 +8,27 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <StackPanel Name="stkTest" >
-            <Label Content="Ajouter un ordre d'achat" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
+            <Label Content="Ajouter une CategorieProduit" StackPanel.ZIndex="0" Margin="0 50 0 0"></Label>
             
             <Grid Name ="grigrid" VerticalAlignment="Top">
                 <StackPanel>
-                    <Label Content="Choisir Produit"></Label>
+                    <Label Content="Choisir un produit"></Label>
                     <ComboBox Name="ComboBoxProduit"
                               DisplayMemberPath="description"
                               SelectedValuePath="id"
                               ItemsSource="{Binding}"
                               SelectedValue="{Binding id_produit}"/>
                     
-                    <Label Content="Choisir Acheteur"></Label>
-                    <ComboBox Name="ComboBoxAcheteur"
-                              DisplayMemberPath="id"
+                    <Label Content="Choisir une categorie"></Label>
+                    <ComboBox Name="ComboBoxCategorie"
+                              DisplayMemberPath="nom"
                               SelectedValuePath="id"
                               ItemsSource="{Binding}"
-                              SelectedValue="{Binding id_acheteur}"/>
-                    
-                    <Label Content="Montant"></Label>
-                    <TextBox Name="montant" PreviewTextInput="FloatOnly" Text="{Binding montant, Mode=TwoWay}"  Height="20"  />
-                
-                    <Label Content="date_achat"></Label>
-                    <DatePicker Name="date_achat" Text="{Binding date_achat, Mode=TwoWay}"  Height="20"  />
+                              SelectedValue="{Binding id_categorie}"/>
                 </StackPanel>
-                
-                
             </Grid>
             
             <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
-            
-            <Button Click="btnReturn" Height="40" Width="100">Retour</Button>
         </StackPanel>
     </Grid>
 </UserControl>

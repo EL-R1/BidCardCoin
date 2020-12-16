@@ -107,9 +107,11 @@
     </Compile>
     <Compile Include="Crtl\AchatViewModel.cs" />
     <Compile Include="Crtl\AcheteurViewModel.cs" />
+    <Compile Include="Crtl\CategorieProduitViewModel.cs" />
     <Compile Include="Crtl\CategorieViewModel.cs" />
     <Compile Include="Crtl\Commissaire_PriseurViewModel.cs" />
     <Compile Include="Crtl\EnchereViewModel.cs" />
+    <Compile Include="Crtl\EstimationViewModel.cs" />
     <Compile Include="Crtl\LieuViewModel.cs" />
     <Compile Include="Crtl\LotViewModel.cs" />
     <Compile Include="Crtl\OrdreAchatViewModel.cs" />
@@ -120,9 +122,11 @@
     <Compile Include="DAL\AchatDAL.cs" />
     <Compile Include="DAL\AcheteurDAL.cs" />
     <Compile Include="DAL\CategorieDAL.cs" />
+    <Compile Include="DAL\CategorieProduitDAL.cs" />
     <Compile Include="DAL\Commissaire_PriseurDAL.cs" />
     <Compile Include="DAL\DALConnection.cs" />
     <Compile Include="DAL\EnchereDAL.cs" />
+    <Compile Include="DAL\EstimationDAL.cs" />
     <Compile Include="DAL\LieuDAL.cs" />
     <Compile Include="DAL\LotDAL.cs" />
     <Compile Include="DAL\OrdreAchatDAL.cs" />
@@ -133,8 +137,10 @@
     <Compile Include="DAO\AchatDAO.cs" />
     <Compile Include="DAO\AcheteurDAO.cs" />
     <Compile Include="DAO\CategorieDAO.cs" />
+    <Compile Include="DAO\CategorieProduitDAO.cs" />
     <Compile Include="DAO\Commissaire_PriseurDAO.cs" />
     <Compile Include="DAO\EnchereDAO.cs" />
+    <Compile Include="DAO\EstimationDAO.cs" />
     <Compile Include="DAO\LieuDAO.cs" />
     <Compile Include="DAO\LotDAO.cs" />
     <Compile Include="DAO\OrdreAchatDAO.cs" />
@@ -145,8 +151,10 @@
     <Compile Include="ORM\AchatORM.cs" />
     <Compile Include="ORM\AcheteurORM.cs" />
     <Compile Include="ORM\CategorieORM.cs" />
+    <Compile Include="ORM\CategorieProduitORM.cs" />
     <Compile Include="ORM\Commissaire_PriseurORM.cs" />
     <Compile Include="ORM\EnchereORM.cs" />
+    <Compile Include="ORM\EstimationORM.cs" />
     <Compile Include="ORM\LieuORM.cs" />
     <Compile Include="ORM\LotORM.cs" />
     <Compile Include="ORM\OrdreAchatORM.cs" />
@@ -155,6 +163,12 @@
     <Compile Include="ORM\ProduitORM.cs" />
     <Compile Include="ORM\VendeurORM.cs" />
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Views\Ajouts\Ajout_Categorie_Produit.xaml.cs">
+      <DependentUpon>Ajout_Categorie_Produit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ajouts\Ajout_Estimation.xaml.cs">
+      <DependentUpon>Ajout_Estimation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\Achat.xaml.cs">
       <DependentUpon>Achat.xaml</DependentUpon>
     </Compile>
@@ -261,6 +275,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\Ajouts\Ajout_Categorie_Produit.xaml" />
+    <Page Include="Views\Ajouts\Ajout_Estimation.xaml" />
     <Page Include="Views\Pages\Achat.xaml" />
     <Page Include="Views\Pages\Acheteur.xaml" />
     <Page Include="Views\Ajouts\Ajout_Achat.xaml" />

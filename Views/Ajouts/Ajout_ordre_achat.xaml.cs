@@ -1,7 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using BidCardCoin.Crtl;
 using BidCardCoin.DAL;
 using BidCardCoin.ORM;
@@ -101,6 +103,12 @@ namespace BidCardCoin.Views
             montant.DataContext = myDataObject;
             date_achat.DataContext = myDataObject;
 
+        }
+        
+        private void FloatOnly(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+.");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

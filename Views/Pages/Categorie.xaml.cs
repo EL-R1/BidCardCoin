@@ -43,6 +43,12 @@ namespace BidCardCoin.Views
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
         }
+        private void btnCategorieProduit(object sender, RoutedEventArgs e)
+        {
+            Ajout_CategorieProduit ucObj = new Ajout_CategorieProduit();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
 
         private void supprimerCategorie(object sender, RoutedEventArgs e)
         {
