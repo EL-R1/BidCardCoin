@@ -39,7 +39,7 @@ namespace BidCardCoin.DAL
 
         public static void updateEstimation(EstimationDAO p)
         {
-            string query = "UPDATE estimation set id_comissaire_priseur=\"" + p.id_comissaire_priseur + "\", id_categorie=\"" + p.id_vendeur + "\";";
+            string query = "UPDATE estimation set id_comissaire_priseur=" + p.id_comissaire_priseur + ", id_vendeur=" + p.id_vendeur + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -53,7 +53,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerEstimation(int id_commissaire_priseur, int id_vendeur)
         {
-            string query = "DELETE FROM estimation WHERE id_comissaire_priseur = \"" + id_commissaire_priseur + "\" and id_produit=" + id_vendeur + "\";";
+            string query = "DELETE FROM estimation WHERE id_comissaire_priseur = " + id_commissaire_priseur + " and id_produit=" + id_vendeur + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();

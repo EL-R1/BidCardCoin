@@ -9,6 +9,13 @@ namespace BidCardCoin.Vue
         {
             InitializeComponent();
         }
+
+        private void btnHome(object sender, RoutedEventArgs e)
+        {
+            SecondaryWindow secondaryWindow = new SecondaryWindow();
+            Close();
+            secondaryWindow.Show();
+        }
         private void btnLogout(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();

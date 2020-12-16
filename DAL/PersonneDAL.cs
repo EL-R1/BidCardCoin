@@ -54,7 +54,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerPersonne(int id)
         {
-            string query = "DELETE FROM personne WHERE id_personne = \"" + id + "\";";
+            string query = "DELETE FROM personne WHERE id_personne = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
