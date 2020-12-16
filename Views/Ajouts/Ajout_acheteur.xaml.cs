@@ -1,7 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using BidCardCoin.Crtl;
 using BidCardCoin.DAL;
 using BidCardCoin.ORM;
@@ -82,6 +84,12 @@ namespace BidCardCoin.Views
             // On refait les liens entre age, slider, textbox, bouton et le nouveau AcheteurViewModel
             is_solvable.DataContext = myDataObject;
             ComboBoxPersonne.DataContext = myDataObject;
+        }
+        
+        private void BoolOnly(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-1]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

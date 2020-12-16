@@ -77,9 +77,9 @@ namespace BidCardCoin.Views
             ville.DataContext = myDataObject;
             code_postal.DataContext = myDataObject;
         }
-        private void Code_Postal(object sender, TextCompositionEventArgs e)
+        private void IntOnly(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("^[0-9]{1,5}$");
+            Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
         

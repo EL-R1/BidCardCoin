@@ -5,6 +5,8 @@ using BidCardCoin.Crtl;
 using BidCardCoin.DAL;
 using BidCardCoin.ORM;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Input;
 
 namespace BidCardCoin.Views
 {
@@ -83,6 +85,12 @@ namespace BidCardCoin.Views
             System.Text.RegularExpressions.Regex reg = new System.Text.RegularExpressions.Regex("[^0-9]");
             return reg.IsMatch(str);
 
+        }
+        
+        private void IntOnly(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }

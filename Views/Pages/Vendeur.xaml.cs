@@ -35,6 +35,13 @@ using System.Windows.Input;
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
         }
+        private void btnEstimation(object sender, RoutedEventArgs e)
+        {
+            Ajout_Estimation ucObj = new Ajout_Estimation();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
+        
 
         private void listeVendeurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

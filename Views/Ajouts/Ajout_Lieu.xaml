@@ -22,7 +22,7 @@
                     <TextBox Name="ville" Text="{Binding ville, Mode=TwoWay}"  Height="20"  />
                     
                     <Label Content="Code Postal"></Label>
-                    <TextBox Name="code_postal" Text="{Binding code_postal, Mode=TwoWay}"  Height="20"  />
+                    <TextBox Name="code_postal" PreviewTextInput="IntOnly" Text="{Binding code_postal, Mode=TwoWay}"  Height="20"  />
                 </StackPanel>
             </Grid>
             
