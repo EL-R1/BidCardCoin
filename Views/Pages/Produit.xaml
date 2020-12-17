@@ -19,7 +19,7 @@
                       SelectionChanged="listeCategories_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="*" Header="id" Binding="{Binding id, Mode=OneWay}" />
-                    <DataGridTextColumn Width="*" Header="id lot" Binding="{Binding id_lot}" />
+                    <DataGridTextColumn Width="*" Header="id lot" Binding="{Binding id_lot, Mode=OneWay}" />
                     <DataGridTextColumn Width="*" Header="prix de départ" Binding="{Binding prix_depart, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="description" Binding="{Binding description, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="date vente" Binding="{Binding date_vente, StringFormat={}{0:dd/MM/yyyy}, Mode=TwoWay}" />
@@ -28,13 +28,30 @@
                     <DataGridTextColumn Width="*" Header="prix_reserve" Binding="{Binding prix_reserve, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="region" Binding="{Binding region, Mode=TwoWay}" />
                     <DataGridTextColumn Width="*" Header="attribut" Binding="{Binding attribut, Mode=TwoWay}" />
-
                 </DataGrid.Columns>
             </DataGrid>
             <Button Content="Supprimer" MouseDoubleClick="supprimerProduit" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>
-
             <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
-
+            
+            
+                <Label Content="id produit : "  HorizontalAlignment="Center" />
+                <TextBox Height="23" Name="TextboxProduit" TextWrapping="Wrap" Width="150" HorizontalAlignment="Center"/>
+            
+            <Grid>
+                <DataGrid Name="listeCP" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="200,0"  Grid.ColumnSpan="2" BorderBrush="Black" Background="#FFA4A4A4"
+                          Height="300"
+                          ScrollViewer.CanContentScroll="True" 
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                          SelectionChanged="listeCategories_SelectionChanged">
+                    <DataGrid.Columns>
+                       <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding nom_cat, Mode=OneWay}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            
+            <Button Content="Voir Categorie associé" Command="{Binding Path=BtnLogin_Click}" CommandParameter="{Binding ElementName=PasswordBox}" Click="BtnLogin_Click" HorizontalAlignment="Center" />
+            
         </StackPanel>
 
 

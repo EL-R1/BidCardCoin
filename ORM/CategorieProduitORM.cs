@@ -37,6 +37,18 @@ namespace BidCardCoin.ORM
             CategorieProduitDAO.supprimerCategorieProduit(id_categorie, id_produit);
         }
 
+        public static ObservableCollection<CategorieProduitViewModel> getProduit_Categorie(int id_produit)
+        {
+            ObservableCollection<CategorieProduitDAO> lDAO = CategorieProduitDAO.getProduit_Categorie(id_produit);
+            ObservableCollection<CategorieProduitViewModel> l = new ObservableCollection<CategorieProduitViewModel>();
+            foreach (CategorieProduitDAO element in lDAO)
+            {
+                CategorieProduitViewModel p = new CategorieProduitViewModel(element.id_produit, element.id_categorie);
+                l.Add(p);
+            }
+            return l;
+        }
+        
         public static void insertCategorieProduit(CategorieProduitViewModel p)
         {
             CategorieProduitDAO.insertCategorieProduit(new CategorieProduitDAO(p.id_produit, p.id_categorie));

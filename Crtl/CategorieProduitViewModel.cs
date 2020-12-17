@@ -15,6 +15,13 @@ namespace BidCardCoin.Crtl
             get { return _id_produit; }
             set { _id_produit = value; OnPropertyChanged("id_produit");}
         }
+        
+        private string _nom_cat;
+        public string nom_cat
+        {
+            get { return _nom_cat; }
+            set { _nom_cat = value; OnPropertyChanged("nom_cat");}
+        }
 
         private int _id_categorie;
         public int id_categorie
@@ -29,7 +36,11 @@ namespace BidCardCoin.Crtl
             this.id_produit = id_produit_;
             this.id_categorie = id_categorie_;
         }
-
+        
+        public CategorieProduitViewModel(string nom_cat)
+        {
+            this.nom_cat = nom_cat;
+        }
         
         public event PropertyChangedEventHandler PropertyChanged;
 
