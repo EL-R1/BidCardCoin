@@ -4,10 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using BidCardCoin.Crtl;
-using BidCardCoin.DAO;
 using BidCardCoin.ORM;
-using BidCardCoin.Vue;
-using Renci.SshNet.Messages;
 
 namespace BidCardCoin.Views
 {
@@ -41,13 +38,14 @@ namespace BidCardCoin.Views
 
         void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            cp = CategorieProduitORM.getProduit_Categorie(Convert.ToInt32(TextboxProduit.Text));
-            if (cp == null)
+            //MessageBox.Show(TextboxProduit.Text);
+            if (TextboxProduit.Text == "")
             {
                 MessageBox.Show("C'est nul");
             }
             else
             {
+                cp = CategorieProduitORM.getProduit_Categorie(Convert.ToInt32(TextboxProduit.Text));
                 myDataObjectCP = new CategorieProduitViewModel();
            
                 listeCP.ItemsSource = cp;
