@@ -13,6 +13,14 @@ namespace BidCardCoin.DAO
             this.id_produit = id_produit_;
             this.id_categorie = id_categorie_;
         }
+
+        public string nom_cat;
+        public CategorieProduitDAO(string nom_cat)
+        {
+            this.nom_cat = nom_cat;
+        }
+        
+        
         public static ObservableCollection<CategorieProduitDAO>  listeCategorieProduits()
         {
             ObservableCollection<CategorieProduitDAO> l = CategorieProduitDAL.selectCategorieProduits();
@@ -38,6 +46,12 @@ namespace BidCardCoin.DAO
         public static void insertCategorieProduit(CategorieProduitDAO p)
         {
             CategorieProduitDAL.insertCategorieProduit(p);
+        }
+        
+        public static ObservableCollection<CategorieProduitDAO> getProduit_Categorie(int id_produit)
+        {
+            ObservableCollection<CategorieProduitDAO> l = CategorieProduitDAL.getProduit_Categorie(id_produit);
+            return l;
         }
     }
 }

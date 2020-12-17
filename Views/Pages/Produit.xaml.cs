@@ -1,10 +1,13 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using BidCardCoin.Crtl;
+using BidCardCoin.DAO;
 using BidCardCoin.ORM;
 using BidCardCoin.Vue;
+using Renci.SshNet.Messages;
 
 namespace BidCardCoin.Views
 {
@@ -14,9 +17,20 @@ namespace BidCardCoin.Views
         {
             InitializeComponent();
             loadProduits();
+
         }
+        
+        
         ProduitViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Produit par exemple.
         ObservableCollection<ProduitViewModel> lp;
+        
+        CategorieProduitViewModel myDataObjectCP; // Objet de liaison avec la vue lors de l'ajout d'une Produit par exemple.
+        ObservableCollection<CategorieProduitViewModel> cp;
+
+        LotViewModel myDataObjectLot; // Objet de liaison avec la vue lors de l'ajout d'une Produit par exemple.
+        ObservableCollection<LotViewModel> lo;
+        int compteur = 0;
+
         int selectedProduitId;
         private void btnAjouter(object sender, RoutedEventArgs e)
         {
@@ -24,7 +38,26 @@ namespace BidCardCoin.Views
             stkTest.Children.Clear();
             stkTest.Children.Add(ucObj);
         }
-        
+
+        void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            cp = CategorieProduitORM.getProduit_Categorie(Convert.ToInt32(TextboxProduit.Text));
+            if (cp == null)
+            {
+                MessageBox.Show("C'est nul");
+            }
+            else
+            {
+                myDataObjectCP = new CategorieProduitViewModel();
+           
+                listeCP.ItemsSource = cp;
+           
+                listeCP.DataContext = myDataObjectCP; 
+           
+                listeCP.Items.Refresh();    
+            }
+        }
+
         void loadProduits()
         {
             lp = ProduitORM.listeProduits();
@@ -50,6 +83,12 @@ namespace BidCardCoin.Views
                 listeProduits.Items.Refresh();
                 ProduitORM.supprimerProduit(selectedProduitId);
             }
+        }
+
+
+        private void btnCatProd(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(myDataObject.id.ToString());
         }
     }
 }
