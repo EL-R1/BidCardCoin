@@ -17,7 +17,6 @@ namespace BidCardCoin.Views
         {
             InitializeComponent();
             loadProduits();
-            //loadCP();
 
         }
         
@@ -31,6 +30,7 @@ namespace BidCardCoin.Views
         LotViewModel myDataObjectLot; // Objet de liaison avec la vue lors de l'ajout d'une Produit par exemple.
         ObservableCollection<LotViewModel> lo;
         int compteur = 0;
+
         int selectedProduitId;
         private void btnAjouter(object sender, RoutedEventArgs e)
         {

@@ -53,7 +53,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerOrdre_Achat(int id)
         {
-            string query = "DELETE FROM ordre_achat WHERE id_ordre_achat = \"" + id + "\";";
+            string query = "DELETE FROM ordre_achat WHERE id_ordre_achat = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -86,7 +86,7 @@ namespace BidCardCoin.DAL
 
         public static Ordre_AchatDAO getOrdre_Achat(int idOrdre_Achat)
         {
-            string query = "SELECT * FROM ordre_achat WHERE id_ordre_achat=" + idOrdre_Achat + ";";
+            string query = "SELECT * FROM ordre_achat WHERE id_ordre_achat=" + idOrdre_Achat + "\";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();

@@ -54,7 +54,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerPhoto(int id)
         {
-            string query = "DELETE FROM photo WHERE id_photo = \"" + id + "\";";
+            string query = "DELETE FROM photo WHERE id_photo = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -87,7 +87,7 @@ namespace BidCardCoin.DAL
 
         public static PhotoDAO getPhoto(int idPhoto)
         {
-            string query = "SELECT * FROM photo WHERE id_photo=" + idPhoto + ";";
+            string query = "SELECT * FROM photo WHERE id_photo=" + idPhoto + "\";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();

@@ -38,7 +38,7 @@ namespace BidCardCoin.DAL
 
         public static void updateVendeur(VendeurDAO p)
         {
-            string query = "UPDATE vendeur set id_personne=\"" + p.id_personne + "\", id_produit=\"" + p.id_produit + "\" where id_vendeur=" + p.id_vendeur + ";";
+            string query = "UPDATE vendeur set id_personne=" + p.id_personne + ", id_produit=" + p.id_produit + " where id_vendeur=" + p.id_vendeur + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -53,7 +53,7 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerVendeur(int id)
         {
-            string query = "DELETE FROM vendeur WHERE id_vendeur = \"" + id + "\";";
+            string query = "DELETE FROM vendeur WHERE id_vendeur = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
@@ -86,7 +86,7 @@ namespace BidCardCoin.DAL
 
         public static VendeurDAO getVendeur(int idvendeur)
         {
-            string query = "SELECT * FROM vendeur WHERE id_vendeur=" + idvendeur + ";";
+            string query = "SELECT * FROM vendeur WHERE id_vendeur=" + idvendeur + "\";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();

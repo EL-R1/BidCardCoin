@@ -19,7 +19,6 @@ using System.Windows.Input;
         
         Commissaire_PriseurViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Commissaire_Priseur par exemple.
         ObservableCollection<Commissaire_PriseurViewModel> lp;
-        int compteur = 0;
         int selectedCommissaire_PriseursId;
         
         void loadCommissaire_Priseurs()

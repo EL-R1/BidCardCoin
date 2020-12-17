@@ -53,10 +53,17 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerEnchere(int id)
         {
-            string query = "DELETE FROM vente_enchere WHERE id_vente_enchere = \"" + id + "\";";
+            string query = "DELETE FROM vente_enchere WHERE id_vente_enchere='" + id + "';";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Votre enchère ne doit pas avoir de lots");
+            }
         }
         public static int getMaxIdEnchere()
         {

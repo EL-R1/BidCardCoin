@@ -53,10 +53,17 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerLot(int id)
         {
-            string query = "DELETE FROM Lot WHERE id_lot = \"" + id + "\";";
+            string query = "DELETE FROM Lot WHERE id_lot = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Votre lot ne doit pas avoir de produits");
+            }
         }
         public static int getMaxIdLot()
         {

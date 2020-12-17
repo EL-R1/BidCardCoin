@@ -18,7 +18,6 @@ namespace BidCardCoin.Views
         
         CategorieViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Categorie par exemple.
         ObservableCollection<CategorieViewModel> lp;
-        int compteur = 0;
         int selectedCategorieId;
         
         void loadCategories()

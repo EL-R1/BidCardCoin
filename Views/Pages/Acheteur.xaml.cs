@@ -19,7 +19,6 @@ using System.Windows.Input;
         
         AcheteurViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Acheteur par exemple.
         ObservableCollection<AcheteurViewModel> lp;
-        int compteur = 0;
         int selectedAcheteursId;
         
         void loadAcheteurs()

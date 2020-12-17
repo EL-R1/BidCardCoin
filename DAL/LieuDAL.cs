@@ -53,10 +53,17 @@ namespace BidCardCoin.DAL
         }
         public static void supprimerLieu(int id)
         {
-            string query = "DELETE FROM lieu WHERE id_lieu = \"" + id + "\";";
+            string query = "DELETE FROM lieu WHERE id_lieu = " + id + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Votre lieu est associé à une vente");
+            }
         }
         public static int getMaxIdLieu()
         {

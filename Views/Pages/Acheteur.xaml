@@ -8,7 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid >
         <StackPanel Name="stkTest">
-            <Label Content="Acheteur" StackPanel.ZIndex="0" Margin="0 50 0 0" ></Label>
+            <Label Content="Acheteur" StackPanel.ZIndex="0" Margin="0,100,0,25" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Berlin Sans FB" FontSize="36" ></Label>
             
             
             <DataGrid Name="listeAcheteurs" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="200,0"  Grid.ColumnSpan="2" BorderBrush="Black" Background="#FFA4A4A4"
@@ -23,9 +23,11 @@
                     <DataGridTextColumn Width="*" Header="Is Solvable" Binding="{Binding is_solvable, Mode=TwoWay}" />
                 </DataGrid.Columns>
             </DataGrid>
-            <Button Content="Supprimer" MouseDoubleClick="supprimerAcheteur" Background="Red" Margin="0,10,11,10" HorizontalAlignment="Right" Width="119"/>
-            <Button Click="btnAjouter" Height="40" Width="100">Ajouter</Button>
-            <Button Click="btnAjouter_Achat" Height="40" Width="100">Ajouter un Achat</Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button MouseDoubleClick="supprimerAcheteur" Background="#FFD7385E" Width="100" Height="40" Margin="0,0,20,0">Supprimer</Button>
+                <Button Click="btnAjouter" Height="40" Width="100" Margin="20,0">Ajouter</Button>
+                <Button Click="btnAjouter_Achat" Height="40" Width="100" Margin="20,0,0,0">Ajouter Achat</Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </UserControl>

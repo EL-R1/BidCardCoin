@@ -62,6 +62,13 @@ namespace BidCardCoin.Views
             //LIEN AVEC la VIEW
             /*listeAchats.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.*/
         }
+
+        private void btnReturn(object sender, RoutedEventArgs e)
+        {
+            Produit ucObj = new Produit();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
         void appliquerContexte()
         {
             // Lien avec les textbox

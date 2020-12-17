@@ -19,7 +19,6 @@ using System.Windows.Input;
         
         Ordre_AchatViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Ordre_Achat par exemple.
         ObservableCollection<Ordre_AchatViewModel> lp;
-        int compteur = 0;
         int selectedOrdre_AchatId;
         
         void loadOrdre_Achats()

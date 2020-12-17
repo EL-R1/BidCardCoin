@@ -19,7 +19,6 @@ using System.Windows.Input;
         
         LotViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Lot par exemple.
         ObservableCollection<LotViewModel> lp;
-        int compteur = 0;
         int selectedLotsId;
         
         void loadLots()

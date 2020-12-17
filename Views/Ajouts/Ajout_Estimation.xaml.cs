@@ -44,7 +44,13 @@ namespace BidCardCoin.Views
             //LIEN AVEC la VIEW
             /*listeEstimations.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.*/
         }
-        
+
+        private void btnReturn(object sender, RoutedEventArgs e)
+        {
+            Commissaire_Priseur ucObj = new Commissaire_Priseur();
+            stkTest.Children.Clear();
+            stkTest.Children.Add(ucObj);
+        }
         void loadCommissaire_Priseurs()
         {
             co = Commissaire_PriseurORM.listeCommissaire_Priseurs();
