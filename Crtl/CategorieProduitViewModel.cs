@@ -33,8 +33,8 @@ namespace BidCardCoin.Crtl
 
         public CategorieProduitViewModel(int id_produit_,int id_categorie_)
         {
-            this.id_produit = id_produit_;
-            this.id_categorie = id_categorie_;
+            id_produit = id_produit_;
+            id_categorie = id_categorie_;
         }
         
         public CategorieProduitViewModel(string nom_cat)

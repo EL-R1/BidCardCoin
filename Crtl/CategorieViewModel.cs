@@ -26,8 +26,8 @@ namespace BidCardCoin.Crtl
 
         public CategorieViewModel(int id_categorie_,string nom_)
         {
-            this.id = id_categorie_;
-            this.nom = nom_;
+            id = id_categorie_;
+            nom = nom_;
         }
 
         

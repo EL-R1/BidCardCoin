@@ -39,8 +39,8 @@
             
             <Label Content="id produit : "  HorizontalAlignment="Center" />
                 <TextBox Height="23" Name="TextboxProduit" TextWrapping="Wrap" Width="150" HorizontalAlignment="Center"/>
-            
-            
+            <Button Content="Voir Categorie associé" Command="{Binding Path=BtnLogin_Click}" CommandParameter="{Binding ElementName=PasswordBox}" Click="BtnLogin_Click" HorizontalAlignment="Center" />
+
             <Grid>
                 <DataGrid Name="listeCP" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="200,0"  Grid.ColumnSpan="2" BorderBrush="Black" Background="#FFA4A4A4"
                           Height="300"
@@ -53,9 +53,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
-            
-            <Button Content="Voir Categorie associé" Command="{Binding Path=BtnLogin_Click}" CommandParameter="{Binding ElementName=PasswordBox}" Click="BtnLogin_Click" HorizontalAlignment="Center" />
-            
+                       
 
            
         </StackPanel>

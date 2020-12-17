@@ -43,7 +43,7 @@ namespace BidCardCoin.ORM
             ObservableCollection<CategorieProduitViewModel> l = new ObservableCollection<CategorieProduitViewModel>();
             foreach (CategorieProduitDAO element in lDAO)
             {
-                CategorieProduitViewModel p = new CategorieProduitViewModel(element.id_produit, element.id_categorie);
+                CategorieProduitViewModel p = new CategorieProduitViewModel(element.nom_cat);
                 l.Add(p);
             }
             return l;
