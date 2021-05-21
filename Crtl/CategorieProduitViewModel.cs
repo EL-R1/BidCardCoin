@@ -13,21 +13,21 @@ namespace BidCardCoin.Crtl
         public int id_produit
         {
             get { return _id_produit; }
-            set { _id_produit = value; OnPropertyChanged("id_produit");}
+            set { _id_produit = value; }
         }
         
         private string _nom_cat;
         public string nom_cat
         {
             get { return _nom_cat; }
-            set { _nom_cat = value; OnPropertyChanged("nom_cat");}
+            set { _nom_cat = value; }
         }
 
         private int _id_categorie;
         public int id_categorie
         {
             get { return _id_categorie; }
-            set { _id_categorie = value; OnPropertyChanged("id_categorie");}
+            set { _id_categorie = value; }
         }
 
 
@@ -56,5 +56,6 @@ namespace BidCardCoin.Crtl
                 CategorieProduitORM.updateCategorieProduit(this);
             }
         }
+        
     }
 }

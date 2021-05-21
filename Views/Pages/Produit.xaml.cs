@@ -39,7 +39,7 @@ namespace BidCardCoin.Views
             stkTest.Children.Add(ucObj);
         }
 
-        void BtnLogin_Click(object sender, RoutedEventArgs e)
+        void BtnAfficherCat(object sender, RoutedEventArgs e)
         {
             cp = CategorieProduitORM.getProduit_Categorie(Convert.ToInt32(TextboxProduit.Text));
             if (cp == null)
@@ -88,7 +88,7 @@ namespace BidCardCoin.Views
 
         private void btnCatProd(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(myDataObject.id.ToString());
+            //MessageBox.Show(myDataObject.id.ToString());
         }
     }
 }

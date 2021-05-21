@@ -15,13 +15,13 @@ namespace BidCardCoin.Views
             InitializeComponent();
 
             DALConnection.OpenConnection();
-            
+
             loadCategorieProduits();
             
             loadProduits();
             
             loadCategories();
-            
+
             appliquerContexte();
 
             gererEventSupplémentaires();
@@ -84,6 +84,7 @@ namespace BidCardCoin.Views
         {
             cp.Add(myDataObject);
             CategorieProduitORM.insertCategorieProduit(myDataObject);
+            
             compteur = cp.Count();
 
             // Comme on a inséré une CategorieProduit, on crée un nouvel objet CategorieProduitViewModel

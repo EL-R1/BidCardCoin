@@ -39,10 +39,9 @@ namespace BidCardCoin.DAL
 
         public static ObservableCollection<CategorieProduitDAO> getProduit_Categorie(int id_produit)
         {
-            MessageBox.Show(Convert.ToString(id_produit));
+            
             ObservableCollection<CategorieProduitDAO> l = new ObservableCollection<CategorieProduitDAO>();
-            string query =
-                "SELECT ca.nom FROM categorie_produit c join produit p on p.id_produit=c.id_produit join categorie ca on ca.id_categorie=c.id_categorie WHERE p.id_produit =" + id_produit + ";";
+            string query = "SELECT ca.nom FROM categorie_produit c join produit p on p.id_produit=c.id_produit join categorie ca on ca.id_categorie=c.id_categorie WHERE p.id_produit =" + id_produit + ";";
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataReader reader = null;
             try
@@ -72,12 +71,13 @@ namespace BidCardCoin.DAL
             MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
             cmd.ExecuteNonQuery();
         }
+        
         public static void insertCategorieProduit(CategorieProduitDAO p)
         {
             string query = "INSERT INTO categorie_produit VALUES (\"" + p.id_produit + "\",\"" +  p.id_categorie + "\");";
-            MySqlCommand cmd2 = new MySqlCommand(query, DALConnection.OpenConnection());
-            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd2);
-            cmd2.ExecuteNonQuery();
+            MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
+            MySqlDataAdapter sqlDataAdap = new MySqlDataAdapter(cmd);
+            cmd.ExecuteNonQuery();
         }
         public static void supprimerCategorieProduit(int id_categorie, int id_produit)
         {
