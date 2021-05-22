@@ -37,8 +37,12 @@
             </StackPanel>
             
             
-            <Label Content="id produit : "  HorizontalAlignment="Center" />
-                <TextBox Height="23" Name="TextboxProduit" TextWrapping="Wrap" Width="150" HorizontalAlignment="Center"/>
+            <Label Content="Choisir un produit" HorizontalAlignment="Center"></Label>
+            <ComboBox Width="150" Name="ComboBoxProduit"
+                      DisplayMemberPath="description"
+                      SelectedValuePath="id"
+                      SelectedValue="{Binding id_produit}"/>
+                <!---<TextBox Height="23" Name="TextboxProduit" TextWrapping="Wrap" Width="150" HorizontalAlignment="Center"/>-->
             
             <Button Content="Voir Categorie associé" Click="BtnAfficherCat" HorizontalAlignment="Center" />
             

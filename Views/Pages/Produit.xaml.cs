@@ -16,6 +16,7 @@ namespace BidCardCoin.Views
         public Produit()
         {
             InitializeComponent();
+            
             loadProduits();
 
         }
@@ -23,6 +24,7 @@ namespace BidCardCoin.Views
         
         ProduitViewModel myDataObject; // Objet de liaison avec la vue lors de l'ajout d'une Produit par exemple.
         ObservableCollection<ProduitViewModel> lp;
+        ObservableCollection<ProduitViewModel> lp2;
         
         CategorieProduitViewModel myDataObjectCP; // Objet de liaison avec la vue lors de l'ajout d'une Produit par exemple.
         ObservableCollection<CategorieProduitViewModel> cp;
@@ -41,7 +43,9 @@ namespace BidCardCoin.Views
 
         void BtnAfficherCat(object sender, RoutedEventArgs e)
         {
-            cp = CategorieProduitORM.getProduit_Categorie(Convert.ToInt32(TextboxProduit.Text));
+            
+            cp = CategorieProduitORM.getProduit_Categorie(Convert.ToInt32(ComboBoxProduit.SelectedValue.ToString()));
+
             if (cp == null)
             {
                 MessageBox.Show("C'est nul");
@@ -49,21 +53,27 @@ namespace BidCardCoin.Views
             else
             {
                 myDataObjectCP = new CategorieProduitViewModel();
-           
+       
                 listeCP.ItemsSource = cp;
-           
+       
                 listeCP.DataContext = myDataObjectCP; 
-           
+       
                 listeCP.Items.Refresh();    
             }
+           
+            
+            
         }
 
         void loadProduits()
         {
             lp = ProduitORM.listeProduits();
+            lp2 = ProduitORM.listeProduits();
             myDataObject = new ProduitViewModel();
             //LIEN AVEC la VIEW
             listeProduits.ItemsSource = lp; // bind de la liste avec la source, permettant le binding.
+            ComboBoxProduit.ItemsSource = lp2;
+
         }
 
         private void listeCategories_SelectionChanged(object sender, SelectionChangedEventArgs e)
