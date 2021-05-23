@@ -39,16 +39,8 @@ namespace BidCardCoin.DAL
 
         public static ObservableCollection<CategorieProduitDAO> getProduit_Categorie(int id_produit)
         {
-<<<<<<< HEAD
-            //MessageBox.Show(Convert.ToString(id_produit));
-            ObservableCollection<CategorieProduitDAO> l = new ObservableCollection<CategorieProduitDAO>();
-            string query =
-                "SELECT DISTINCT ca.nom FROM categorie_produit c join produit p on p.id_produit=c.id_produit join categorie ca on ca.id_categorie=c.id_categorie WHERE p.id_produit =" + id_produit + ";";
-=======
-            
             ObservableCollection<CategorieProduitDAO> l = new ObservableCollection<CategorieProduitDAO>();
             string query = "SELECT ca.nom FROM categorie_produit c join produit p on p.id_produit=c.id_produit join categorie ca on ca.id_categorie=c.id_categorie WHERE p.id_produit =" + id_produit + ";";
->>>>>>> R1
             MySqlCommand cmd = new MySqlCommand(query, DALConnection.OpenConnection());
             MySqlDataReader reader = null;
             try
