@@ -48,26 +48,18 @@
             <Grid>
                 <DataGrid Name="listeCP" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Left" Margin="200,0"  Grid.ColumnSpan="2" BorderBrush="Black" Background="#FFA4A4A4"
                           Height="300"
->>>>>>> R1
                           ScrollViewer.CanContentScroll="True" 
                           ScrollViewer.VerticalScrollBarVisibility="Auto"
                           ScrollViewer.HorizontalScrollBarVisibility="Auto"
                           SelectionChanged="listeCategories_SelectionChanged" Width="300" VerticalAlignment="Center" Margin="0">
                     <DataGrid.Columns>
-<<<<<<< HEAD
-                        <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding nom_cat, Mode=OneWay}" />
-                    </DataGrid.Columns>
-                </DataGrid>
-            </Grid>
-=======
                        <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding nom_cat, Mode=TwoWay}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
             
             
-            
->>>>>>> R1
+           
 
         </StackPanel>
 
