@@ -34,14 +34,7 @@
                 <Button MouseDoubleClick="supprimerProduit" Background="#FFD7385E" Width="100" Height="40" Margin="0,0,20,0" Content="Supprimer" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <Button Click="btnAjouter" Height="40" Width="100" Margin="20,0,0,0" Content="Ajouter" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
-<<<<<<< HEAD
-            <Label Content="id produit : "  HorizontalAlignment="Center" Margin="114,20,114,0" VerticalAlignment="Center" />
-            <TextBox Height="23" x:Name="TextboxProduit" TextWrapping="Wrap" Width="150" HorizontalAlignment="Center" Margin="75,0" VerticalAlignment="Center"/>
-            <Button Content="Voir catégories associées" Command="{Binding BtnLogin_Click}" CommandParameter="{Binding ElementName=PasswordBox}" Click="BtnLogin_Click" Height="40" Width="190" Margin="55,20,55,1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <Grid Height="121" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
-                <DataGrid x:Name="listeCP" ItemsSource="{Binding}" AutoGenerateColumns="false" HorizontalAlignment="Center" BorderBrush="Black" Background="#FFA4A4A4"
-=======
-            
+          
             
             <Label Content="Choisir un produit" HorizontalAlignment="Center"></Label>
             <ComboBox Width="150" Name="ComboBoxProduit"
