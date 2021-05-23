@@ -308,12 +308,6 @@
     <Page Include="Views\Pages\Vendeur.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\C#\Application modele B2\WpfApp11\ConnectMySQL.csproj">
-      <Project>{c73383b9-d216-4c8b-9f0d-0f75c8b2a839}</Project>
-      <Name>ConnectMySQL</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\account.png" />
     <Resource Include="images\gavel.png" />
     <Resource Include="images\home.png" />

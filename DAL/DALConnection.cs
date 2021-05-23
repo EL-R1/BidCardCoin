@@ -17,8 +17,8 @@ namespace BidCardCoin.DAL
             {
                 server = "localhost";
                 database = "bcc";
-                uid = "root";
-                password = "";
+                uid = "bccuser";
+                password = "epsi";
                 string connectionString;
                 connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
                 connection = new MySqlConnection(connectionString);
