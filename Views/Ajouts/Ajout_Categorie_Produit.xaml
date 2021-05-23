@@ -16,14 +16,12 @@
                     <ComboBox Name="ComboBoxProduit"
                               DisplayMemberPath="description"
                               SelectedValuePath="id"
-                              ItemsSource="{Binding}"
                               SelectedValue="{Binding id_produit}"/>
                     
                     <Label Content="Choisir une categorie"></Label>
                     <ComboBox Name="ComboBoxCategorie"
                               DisplayMemberPath="nom"
                               SelectedValuePath="id"
-                              ItemsSource="{Binding}"
                               SelectedValue="{Binding id_categorie}"/>
                 </StackPanel>
             </Grid>

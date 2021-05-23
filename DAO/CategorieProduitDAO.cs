@@ -7,6 +7,7 @@ namespace BidCardCoin.DAO
     {
         public int id_produit;
         public int id_categorie;
+        public string nom_cat;
 
         public CategorieProduitDAO(int id_produit_,int id_categorie_)
         {
@@ -14,10 +15,10 @@ namespace BidCardCoin.DAO
             this.id_categorie = id_categorie_;
         }
 
-        public string nom_cat;
-        public CategorieProduitDAO(string nom_cat)
+        
+        public CategorieProduitDAO(string nom_cat_)
         {
-            this.nom_cat = nom_cat;
+            this.nom_cat = nom_cat_;
         }
         
         
@@ -37,7 +38,7 @@ namespace BidCardCoin.DAO
         {
             CategorieProduitDAL.updateCategorieProduit(p);
         }
-
+        
         public static void supprimerCategorieProduit(int id_categorie, int id_produit)
         {
             CategorieProduitDAL.supprimerCategorieProduit(id_categorie, id_produit);
